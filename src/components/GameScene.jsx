@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './style/GameScene.css';
+
 function GameScene() {
   return (
     <div className="GameScene-container">
