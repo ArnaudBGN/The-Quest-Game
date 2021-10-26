@@ -2,7 +2,7 @@ import React from 'react';
 
 import GameDialog from './GameDialog';
 
-import './style/GameScene.css';
+import './style/GamePage.css';
 
 const messages = [
   'This is a very cool RPG dialog message.',
