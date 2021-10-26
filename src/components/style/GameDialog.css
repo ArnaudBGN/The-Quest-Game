@@ -1,0 +1,24 @@
+.DialogBox-container {
+  background-color: #e4d2c8;
+  border: 3px solid #3c281d;
+  padding: 15px;
+  margin: 0 10px;
+}
+
+.DialogBox-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.DialogBox-Footer {
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  text-align: end;
+}
+
+.DialogBox-Next {
+  padding: 5px;
+  border-radius: 5px;
+}
