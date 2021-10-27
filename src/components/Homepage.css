@@ -1,0 +1,8 @@
+body {
+  height: 100vh;
+  background-image: linear-gradient (to left, #1f1f1f, #3c281d, #6f0b00, #e67a00);
+}
+
+home-title {
+  color: black;
+}

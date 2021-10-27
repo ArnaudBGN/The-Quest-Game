@@ -10,11 +10,11 @@ function Homepage() {
   };
 
   return (
-    <div className="image-home">
-      <div className="text-home">
+    <div className="home-image">
+      <div className="home-title">
         <h1>Bienvenue, vous êtes le héro!</h1>
       </div>
-      <div className="accroche-home">
+      <div className="home-text">
         <p></p>
       </div>
       <button onClick={handelclick}>PLAY</button>
