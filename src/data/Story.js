@@ -13,17 +13,20 @@ const story = [
       choices: [
         {
           type: 'button',
-          choiceMade: 'Aller à gauche',
+          choiceText: 'Aller à gauche',
+          choiceMade: 'gauche',
           nextId: '1',
         },
         {
           type: 'button',
-          choiceMade: 'Aller tout droit',
+          choiceText: 'Aller tout droit',
+          choiceMade: 'tout-droit',
           nextId: '2',
         },
         {
           type: 'button',
-          choiceMade: 'Aller à droite',
+          choiceText: 'Aller à droite',
+          choiceMade: 'droite',
           nextId: '3',
         },
       ],
@@ -32,25 +35,25 @@ const story = [
   {
     id: '1',
     image: 'https://picsum.photos/400/300',
-    route: [
-      {
-        action: 'gauche',
-        require: '',
-        text: ['Vous êtes arriver à gauche', 'Où voulez-vous aller'],
-        choices: [
-          {
-            type: 'button',
-            choiceMade: 'regarder à gauche',
-            nextId: '1-1',
-          },
-          {
-            type: 'button',
-            choiceMade: 'Retourner en arrière',
-            nextId: '0',
-          },
-        ],
-      },
-    ],
+    route: {
+      action: 'gauche',
+      require: '',
+      text: ['Vous êtes arriver à gauche', 'Où voulez-vous aller'],
+      choices: [
+        {
+          type: 'button',
+          choiceText: 'regarder à gauche',
+          choiceMade: 'gauche',
+          nextId: '1-1',
+        },
+        {
+          type: 'button',
+          choiceText: 'Retourner en arrière',
+          choiceMade: 'arriere',
+          nextId: '0',
+        },
+      ],
+    },
   },
   {
     id: '2',
