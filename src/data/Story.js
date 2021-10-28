@@ -1,7 +1,7 @@
 const story = [
   {
     id: '0',
-    image: 'https://picsum.photos/400/300',
+    image: 'https://picsum.photos/400/299',
     route: {
       action: '',
       require: '',
@@ -34,7 +34,7 @@ const story = [
   },
   {
     id: '1',
-    image: 'https://picsum.photos/400/300',
+    image: 'https://picsum.photos/400/303',
     route: {
       action: 'gauche',
       require: '',
@@ -57,7 +57,7 @@ const story = [
   },
   {
     id: '2',
-    image: 'https://picsum.photos/400/300',
+    image: 'https://picsum.photos/400/302',
     route: [
       {
         action: 'tout droit',
@@ -71,6 +71,29 @@ const story = [
         ],
       },
     ],
+  },
+  {
+    id: '3',
+    image: 'https://picsum.photos/400/301',
+    route: {
+      action: 'gauche',
+      require: '',
+      text: ['Un puissant enemi se dresse devant vous !!!', "Oserez-vous l'attaquer ou fuirez-vous comme un lâche"],
+      choices: [
+        {
+          type: 'button',
+          choiceText: 'Attaquer',
+          choiceMade: 'attack',
+          nextId: '3-1',
+        },
+        {
+          type: 'button',
+          choiceText: 'Fuir',
+          choiceMade: 'flee',
+          nextId: '3-2',
+        },
+      ],
+    },
   },
 ];
 
