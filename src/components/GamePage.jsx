@@ -16,14 +16,14 @@ function GamePage() {
   }, [routeId]);
 
   return (
-    <div className="GameScene-container">
-      <div className="GameScene-scene">
+    <div className="GamePage-container">
+      <div className="GamePage-scene">
         <img src={currentStory[0].image} alt="" />
       </div>
-      <div className="GaneScene-text">
+      <div className="GagstneScene-text">
         <GameDialog messages={currentStory[0].route.text} currentMessage={currentMessage} setCurrentMessage={setCurrentMessage} />
       </div>
-      <div className="GameScene-choices">
+      <div className="GamePage-choices">
         {currentStory[0].route.choices.map((choice, index) =>
           choice.type === 'button' ? (
             <ButtonChoices
