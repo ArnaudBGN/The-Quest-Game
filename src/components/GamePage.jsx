@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Character() {
+function GamePage() {
   return <div></div>;
 }
 
-export default Character;
+export default GamePage;

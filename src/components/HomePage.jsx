@@ -1,12 +1,12 @@
 import React from 'react';
-import './Homepage.css';
+import './HomePage.css';
 import { useHistory } from 'react-router-dom';
 
-function Homepage() {
+function HomePage() {
   const history = useHistory();
 
   const handelclick = () => {
-    history.push('Character');
+    history.push('CharacterSelect');
   };
 
   return (
@@ -22,4 +22,4 @@ function Homepage() {
   );
 }
 
-export default Homepage;
+export default HomePage;
