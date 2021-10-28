@@ -2,13 +2,19 @@ import React from 'react';
 
 import './style/ButtonChoice.css';
 
-// eslint-disable-next-line react/prop-types
-function ChoiceButton({ text }) {
+function ButtonChoices({ text, nextId, setRouteId, setCurrentMessage }) {
+  const handleClick = () => {
+    setRouteId(nextId);
+    setCurrentMessage(0);
+  };
+
   return (
     <div>
-      <button className="ChoiceButton">{text}</button>
+      <button className="ChoiceButton" onClick={handleClick}>
+        {text}
+      </button>
     </div>
   );
 }
 
-export default ChoiceButton;
+export default ButtonChoices;

@@ -1,27 +1,44 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import GameDialog from './GameDialog';
+import ButtonChoices from './ButtonChoices';
+import story from '../data/Story';
 
 import './style/GamePage.css';
 
-const messages = [
-  'This is a very cool RPG dialog message.',
-  'If you would like to see more awesome stuff, check out the other writeups at codeworkshop.dev!',
-  'Remember to wash your hands!',
-];
+function GamePage() {
+  const [currentStory, setCurrentStory] = useState([story[0]]);
+  const [routeId, setRouteId] = useState('0');
+  const [currentMessage, setCurrentMessage] = useState(0);
 
-function GameScene() {
+  useEffect(() => {
+    setCurrentStory(story.filter((elem) => elem.id === routeId));
+  }, [routeId]);
+
   return (
     <div className="GameScene-container">
       <div className="GameScene-scene">
-        <img src="" alt="" />
+        <img src={currentStory[0].image} alt="" />
       </div>
       <div className="GaneScene-text">
-        <GameDialog messages={messages} />
+        <GameDialog messages={currentStory[0].route.text} currentMessage={currentMessage} setCurrentMessage={setCurrentMessage} />
       </div>
-      <div className="GameScene-choices"></div>
+      <div className="GameScene-choices">
+        {currentStory[0].route.choices.map((choice, index) =>
+          choice.type === 'button' ? (
+            <ButtonChoices
+              key={index}
+              text={choice.choiceText}
+              choice={choice.choiceMade}
+              nextId={choice.nextId}
+              setRouteId={setRouteId}
+              setCurrentMessage={setCurrentMessage}
+            />
+          ) : null,
+        )}
+      </div>
     </div>
   );
 }
 
-export default GameScene;
+export default GamePage;

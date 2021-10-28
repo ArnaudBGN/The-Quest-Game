@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Message from './Message';
 
 import './style/GameDialog.css';
 
-function GameDialog({ messages }) {
-  const [currentMessage, setCurrentMessage] = useState(0);
+function GameDialog({ messages, currentMessage, setCurrentMessage }) {
   const handleClickNext = () => {
     if (currentMessage < messages.length - 1) {
       setCurrentMessage(currentMessage + 1);
