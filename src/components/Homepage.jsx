@@ -10,7 +10,7 @@ function Homepage() {
   };
 
   return (
-    <div className="home-image">
+    <div className="home-picture">
       <div className="home-title">
         <h1>Bienvenue, vous êtes le héro!</h1>
       </div>
