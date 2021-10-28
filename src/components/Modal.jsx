@@ -3,11 +3,14 @@ import React from 'react';
 function Modal({ revele, cache }) {
   return revele ? (
     <React.Fragment>
-      <div className="modal">
-        <div className="modalHeader">
-          <button type="button" className="close" onClick={cache}>
-            X
-          </button>
+      <div className="overlay" />
+      <div className="wrapper">
+        <div className="modal">
+          <div className="modalHeader">
+            <button type="button" className="close" onClick={cache}>
+              X
+            </button>
+          </div>
         </div>
 
         <label htmlform="name" htmlFor="name">
