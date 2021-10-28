@@ -10,12 +10,12 @@ function Homepage() {
   };
 
   return (
-    <div className="home-picture">
+    <div className="home-image">
       <div className="home-title">
-        <h1>Bienvenue, vous êtes le héro!</h1>
+        <h1>The Quest Game</h1>
       </div>
       <div className="home-text">
-        <p></p>
+        <p>Bienvenue au jeu dont vous êtes le héro! </p>
       </div>
       <button onClick={handelclick}>PLAY</button>
     </div>
