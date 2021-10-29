@@ -1,4 +1,5 @@
 import React from 'react';
+import './style/Modal.css';
 
 function Modal({ revele, cache }) {
   return revele ? (
