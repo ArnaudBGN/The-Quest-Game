@@ -58,19 +58,17 @@ const story = [
   {
     id: '2',
     image: 'https://picsum.photos/400/302',
-    route: [
-      {
-        action: 'tout droit',
-        require: '',
-        text: ['Vous avancez tout droit', 'Vous tombez sur une enigme', 'Quel est le muscle ?'],
-        choices: [
-          {
-            type: 'input',
-            choices: (answer) => (answer === 'kamoolox' ? '2-1' : '0'),
-          },
-        ],
-      },
-    ],
+    route: {
+      action: 'tout droit',
+      require: '',
+      text: ['Vous avancez tout droit', 'Vous tombez sur une enigme', 'Quel est le muscle ?'],
+      choices: [
+        {
+          type: 'input',
+          checkAnswer: (answer) => (answer === 'kamoolox' ? '2-1' : '0'),
+        },
+      ],
+    },
   },
   {
     id: '3',
