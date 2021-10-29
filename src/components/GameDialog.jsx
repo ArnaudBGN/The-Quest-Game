@@ -1,7 +1,7 @@
 import React from 'react';
 import Message from './Message';
 
-import './style/GameDialog.css';
+import styles from './style/GameDialog.module.css';
 
 function GameDialog({ messages, currentMessage, setCurrentMessage }) {
   const handleClickNext = () => {
@@ -13,11 +13,11 @@ function GameDialog({ messages, currentMessage, setCurrentMessage }) {
   };
 
   return (
-    <div className="DialogBox-container">
-      <div className="DialogBox-title">Dialog title</div>
+    <div className={styles.DialogBoxContainer}>
+      <div className={styles.DialogBoxTitle}>Dialog title</div>
       <Message message={messages[currentMessage]} key={currentMessage} />
-      <div className="DialogBox-Footer">
-        <button onClick={handleClickNext} className="DialogBox-Next">
+      <div className={styles.DialogBoxFooter}>
+        <button onClick={handleClickNext} className={styles.DialogBoxNext}>
           Next &gt;
         </button>
       </div>

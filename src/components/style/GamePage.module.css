@@ -1,17 +1,17 @@
-.GamePage-container {
+.GamePageContainer {
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100vw;
 }
 
-.GamePage-scene {
+.GamePageScene {
   background-color: #6f0b00;
   height: 40vh;
   margin: 10px;
 }
 
-.GamePage-choices {
+.GamePageChoices {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
