@@ -5,6 +5,7 @@ import ButtonChoices from './ButtonChoices';
 import story from '../data/Story';
 
 import './style/GamePage.css';
+import InputChoice from './InputChoice';
 
 function GamePage() {
   const [currentStory, setCurrentStory] = useState([story[0]]);
@@ -34,7 +35,9 @@ function GamePage() {
               setRouteId={setRouteId}
               setCurrentMessage={setCurrentMessage}
             />
-          ) : null,
+          ) : (
+            <InputChoice checkAnswer={choice.checkAnswer} setRouteId={setRouteId} setCurrentMessage={setCurrentMessage} />
+          ),
         )}
       </div>
     </div>
