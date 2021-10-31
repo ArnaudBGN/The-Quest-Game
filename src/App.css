@@ -1,16 +1,4 @@
-.button {
-  display: block;
-  margin: auto;
-  background-color: black;
-  color: #e4d2c8;
-}
-
-button.close {
-  background-color: #6f0b00;
-  color: #e4d2c8;
-  transition: all 0.3s ease-out;
-}
-button {
-  color: #e4d2c8;
-  background-color: black;
+* {
+  margin: 0;
+  padding: 0;
 }
