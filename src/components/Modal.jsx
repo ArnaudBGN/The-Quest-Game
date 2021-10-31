@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './style/Modal.module.css';
 
-function Modal({ revele, hide, goToCharacterSelect }) {
+function Modal({ revele, hide, goToCharacterSelect, setUserName }) {
+  const handleChange = (e) => setUserName(e.target.value);
+
   return revele ? (
     <React.Fragment>
       <div className={styles.overlay} />
@@ -17,7 +19,7 @@ function Modal({ revele, hide, goToCharacterSelect }) {
         <label className={styles.labelName} htmlform="name" htmlFor="name">
           Enter your Name
         </label>
-        <input type="texte" id="name" name="name" />
+        <input type="texte" id="name" name="name" onChange={handleChange} />
         <button className={styles.NextButton} onClick={goToCharacterSelect}>
           Next
         </button>

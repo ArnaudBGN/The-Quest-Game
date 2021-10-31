@@ -7,12 +7,14 @@ import './HomePage.css';
 function HomePage() {
   const history = useHistory();
   const [revele, changeRevele] = useState(false);
+  const [userName, setUserName] = useState('');
 
   const toggle = () => {
     changeRevele(!revele);
   };
 
   const goToCharacterSelect = () => {
+    localStorage.setItem('username', userName);
     history.push('CharacterSelect');
   };
 
@@ -27,7 +29,7 @@ function HomePage() {
       <button className="homeButton" onClick={toggle}>
         PLAY
       </button>
-      <UserNameDialog revele={revele} toggle={toggle} goToCharacterSelect={goToCharacterSelect} />
+      <UserNameDialog revele={revele} toggle={toggle} goToCharacterSelect={goToCharacterSelect} setUserName={setUserName} />
     </div>
   );
 }
