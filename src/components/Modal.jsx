@@ -1,24 +1,26 @@
 import React from 'react';
-import './style/Modal.css';
+import styles from './style/Modal.module.css';
 
-function Modal({ revele, cache }) {
+function Modal({ revele, hide, goToCharacterSelect }) {
   return revele ? (
     <React.Fragment>
-      <div className="overlay" />
-      <div className="wrapper">
-        <div className="modal">
-          <div className="modalHeader">
-            <button type="button" className="close" onClick={cache}>
+      <div className={styles.overlay} />
+      <div className={styles.wrapper}>
+        <div className={styles.modal}>
+          <div className={styles.modalHeader}>
+            <button type="button" className={styles.close} onClick={hide}>
               X
             </button>
           </div>
         </div>
 
-        <label htmlform="name" htmlFor="name">
+        <label className={styles.labelName} htmlform="name" htmlFor="name">
           Enter your Name
         </label>
         <input type="texte" id="name" name="name" />
-        <button>Next</button>
+        <button className={styles.NextButton} onClick={goToCharacterSelect}>
+          Next
+        </button>
       </div>
     </React.Fragment>
   ) : null;
