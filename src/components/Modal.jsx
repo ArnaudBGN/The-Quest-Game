@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './style/Modal.module.css';
 
-function Modal({ revele, hide, goToCharacterSelect, setUserName }) {
+function Modal({ revele, goToCharacterSelect, setUserName }) {
   const handleChange = (e) => setUserName(e.target.value);
 
   return revele ? (
@@ -9,18 +9,14 @@ function Modal({ revele, hide, goToCharacterSelect, setUserName }) {
       <div className={styles.overlay} />
       <div className={styles.wrapper}>
         <div className={styles.modal}>
-          <div className={styles.modalHeader}>
-            <button type="button" className={styles.close} onClick={hide}>
-              X
-            </button>
-          </div>
+          <div className={styles.modalHeader}></div>
         </div>
 
         <label className={styles.labelName} htmlform="name" htmlFor="name">
           Enter your Name
         </label>
-        <input type="texte" id="name" name="name" onChange={handleChange} />
-        <button className={styles.NextButton} onClick={goToCharacterSelect}>
+        <input className={styles.windowName} type="texte" id="name" name="name" onChange={handleChange} />
+        <button className={styles.nextButton} onClick={goToCharacterSelect}>
           Next
         </button>
       </div>
