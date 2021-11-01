@@ -20,6 +20,8 @@
 .labelName {
     justify-content: center;
     display: flex;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-style: oblique;
     height: 20%;
     font-size: 25px;
     align-items: center;
