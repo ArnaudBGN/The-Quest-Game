@@ -7,8 +7,11 @@ function GameDialog({ messages, currentMessage, setCurrentMessage }) {
   const handleClickNext = () => {
     if (currentMessage < messages.length - 1) {
       setCurrentMessage(currentMessage + 1);
-    } else {
-      setCurrentMessage(0);
+    }
+  };
+  const handleClickPrevious = () => {
+    if (currentMessage > 0) {
+      setCurrentMessage(currentMessage - 1);
     }
   };
 
@@ -17,9 +20,16 @@ function GameDialog({ messages, currentMessage, setCurrentMessage }) {
       <div className={styles.DialogBoxTitle}>Dialog title</div>
       <Message message={messages[currentMessage]} key={currentMessage} />
       <div className={styles.DialogBoxFooter}>
-        <button onClick={handleClickNext} className={styles.DialogBoxNext}>
-          Next &gt;
-        </button>
+        {currentMessage > 0 ? (
+          <button onClick={handleClickPrevious} className={styles.DialogBoxNext}>
+            &lt; Previous
+          </button>
+        ) : null}
+        {currentMessage < messages.length - 1 ? (
+          <button onClick={handleClickNext} className={styles.DialogBoxNext}>
+            Next &gt;
+          </button>
+        ) : null}
       </div>
     </div>
   );
