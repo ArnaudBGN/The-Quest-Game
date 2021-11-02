@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import styles from './style/InputChoice.module.css';
+
 function InputChoice({ checkAnswer, setRouteId, setCurrentMessage }) {
   const [answer, setAnswer] = useState('');
 
@@ -14,7 +16,14 @@ function InputChoice({ checkAnswer, setRouteId, setCurrentMessage }) {
 
   return (
     <div>
-      <input type="text" id="answer" name="answer" onChange={(e) => handleChange(e)} onKeyPress={(e) => handleAnswer(e)} />
+      <input
+        className={styles.InputChoice}
+        type="text"
+        id="answer"
+        name="answer"
+        onChange={(e) => handleChange(e)}
+        onKeyPress={(e) => handleAnswer(e)}
+      />
     </div>
   );
 }
