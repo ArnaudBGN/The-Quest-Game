@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import styles from '../components/styles/HomePage.module.css';
+
+import UserNameDialog from './UserNameDialog';
+import styles from './style/HonePage.module.css';
 
 function HomePage() {
   const history = useHistory();
+  const [revele, changeRevele] = useState(false);
+  const [userName, setUserName] = useState('');
 
-  const handelclick = () => {
+  const toggle = () => {
+    changeRevele(!revele);
+  };
+
+  const goToCharacterSelect = () => {
+    localStorage.setItem('username', userName);
     history.push('CharacterSelect');
   };
 
@@ -15,11 +24,12 @@ function HomePage() {
         <h1>The Quest Game</h1>
       </div>
       <div className={styles.homeText}>
-        <p>Bienvenue au jeu dont vous êtes le héros!</p>
+        <p>Bienvenue au jeu dont vous êtes le héros! </p>
       </div>
-      <button className={styles.homeButton} onClick={handelclick}>
+      <button className={styles.homeButton} onClick={toggle}>
         PLAY
       </button>
+      <UserNameDialog revele={revele} toggle={toggle} goToCharacterSelect={goToCharacterSelect} setUserName={setUserName} />
     </div>
   );
 }
