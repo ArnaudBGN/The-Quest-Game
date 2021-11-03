@@ -28,5 +28,4 @@ function CharacterSelect() {
     </div>
   );
 }
-
 export default CharacterSelect;

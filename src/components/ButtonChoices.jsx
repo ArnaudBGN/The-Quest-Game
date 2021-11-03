@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './style/ButtonChoice.css';
+import styles from './style/ButtonChoice.module.css';
 
 function ButtonChoices({ text, nextId, setRouteId, setCurrentMessage }) {
   const handleClick = () => {
@@ -10,7 +10,7 @@ function ButtonChoices({ text, nextId, setRouteId, setCurrentMessage }) {
 
   return (
     <div>
-      <button className="ChoiceButton" onClick={handleClick}>
+      <button className={styles.ChoiceButton} onClick={handleClick}>
         {text}
       </button>
     </div>

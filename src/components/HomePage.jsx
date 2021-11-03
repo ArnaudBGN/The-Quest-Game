@@ -1,8 +1,8 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+
 import UserNameDialog from './UserNameDialog';
-import './HomePage.css';
+import styles from './style/HonePage.module.css';
 
 function HomePage() {
   const history = useHistory();
@@ -19,14 +19,14 @@ function HomePage() {
   };
 
   return (
-    <div className="home-image">
-      <div className="home-title">
+    <div className={styles.home}>
+      <div className={styles.homeTitle}>
         <h1>The Quest Game</h1>
       </div>
-      <div className="home-text">
+      <div className={styles.homeText}>
         <p>Bienvenue au jeu dont vous êtes le héros! </p>
       </div>
-      <button className="homeButton" onClick={toggle}>
+      <button className={styles.homeButton} onClick={toggle}>
         PLAY
       </button>
       <UserNameDialog revele={revele} toggle={toggle} goToCharacterSelect={goToCharacterSelect} setUserName={setUserName} />
