@@ -1,6 +1,6 @@
 import React from 'react';
-import './HomePage.css';
 import { useHistory } from 'react-router-dom';
+import styles from '../components/styles/HomePage.module.css';
 
 function HomePage() {
   const history = useHistory();
@@ -10,14 +10,16 @@ function HomePage() {
   };
 
   return (
-    <div className="home-image">
-      <div className="home-title">
+    <div className={styles.home}>
+      <div className={styles.homeTitle}>
         <h1>The Quest Game</h1>
       </div>
-      <div className="home-text">
-        <p>Bienvenue au jeu dont vous êtes le héro! </p>
+      <div className={styles.homeText}>
+        <p>Bienvenue au jeu dont vous êtes le héros!</p>
       </div>
-      <button onClick={handelclick}>PLAY</button>
+      <button className={styles.homeButton} onClick={handelclick}>
+        PLAY
+      </button>
     </div>
   );
 }
