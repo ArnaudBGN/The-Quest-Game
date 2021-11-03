@@ -11,9 +11,11 @@ function GamePage() {
   const [currentStory, setCurrentStory] = useState([story[0]]);
   const [routeId, setRouteId] = useState('0');
   const [currentMessage, setCurrentMessage] = useState(0);
+  const [countMessage, setCountMessage] = useState(1);
 
   useEffect(() => {
     setCurrentStory(story.filter((elem) => elem.id === routeId));
+    setCountMessage(1);
   }, [routeId]);
 
   return (
@@ -22,7 +24,13 @@ function GamePage() {
         <img src={currentStory[0].image} alt="" />
       </div>
       <div className={styles.GamePageSceneText}>
-        <GameDialog messages={currentStory[0].route.text} currentMessage={currentMessage} setCurrentMessage={setCurrentMessage} />
+        <GameDialog
+          messages={currentStory[0].route.text}
+          currentMessage={currentMessage}
+          setCurrentMessage={setCurrentMessage}
+          countMessage={countMessage}
+          setCountMessage={setCountMessage}
+        />
       </div>
       <div className={styles.GamePageChoices}>
         {currentStory[0].route.choices.map((choice, index) =>
