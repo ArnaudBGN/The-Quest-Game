@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import UserNameDialog from './UserNameDialog';
-import styles from './style/HonePage.module.css';
+import styles from './style/HomePage.module.css';
 
 function HomePage() {
   const history = useHistory();
