@@ -19,7 +19,7 @@ function HomePage() {
   };
 
   return (
-    <div className="home-image">
+    <div className="home">
       <div className="home-title">
         <h1>The Quest Game</h1>
       </div>

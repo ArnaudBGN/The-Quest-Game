@@ -1,25 +1,25 @@
-body {
+.hone {
   height: 100vh;
-  background-image: url(https://pixabay.com/get/g6d401838eb423613f59138799dbaebc3414231bc93e0b2a2568c2672e5de324b772eaffbc2952232f68215a2370633eb2bcdafa3871ddbe33cf3ad30183c368378dc91608d10e81740ba56b397859bf1_1920.jpg);
+  background-image: url('./images/Background.jpg');
   display: flex;
   justify-content: center;
   justify-self: center;
+  position: absolute;
 }
 
 .home-text {
   display: flex;
-  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-family: URW Chancery L, cursive;
   font-style: oblique;
   font-size: 40px;
   color: #eed3c5;
   justify-content: center;
   align-items: center;
-  background-image: url(https://pixabaycomimagesid-706989/);
 }
 
 .home-title {
   color: #eed3c5;
-  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-family: URW Chancery L, cursive;
   font-style: oblique;
   font-size: 25px;
   display: flex;
