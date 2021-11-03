@@ -1,13 +1,11 @@
 .wrapper {
   display: block;
-  justify-content: center;
-  align-items: center;
   color: #e4d2c8;
   background-color: #3c281d;
-  width: 60%;
+  width: 40%;
   border: 2px solid black;
   padding-right: 15px;
-  margin-left: 150px;
+  margin: 0 auto;
   border-radius: 50%;
   padding-bottom: 40px;
 }

@@ -1,4 +1,8 @@
-#hero {
+.CharacterSelect {
+  height: 100%;
+}
+
+.hero {
   font-size: 2rem;
   display: flex;
   justify-content: center;

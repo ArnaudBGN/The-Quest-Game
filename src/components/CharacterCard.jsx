@@ -27,11 +27,11 @@ function CharacterCard({ card }) {
           objectIMG
             .filter((elem) => elem.race === Characters.index)
             .map((elem) => {
-              <img src={elem.img} alt={elem.race} />;
+              <img className={styles.CharImg} src={elem.img} alt={elem.race} />;
             })}
 
         <div className={styles.CharacterCardDescription}>
-          <h1 id={styles.CharDesc}>Character Description</h1>
+          <h1 className={styles.CharDesc}>Character Description</h1>
           <p>
             <em>Race</em> : {Characters.name}
           </p>
@@ -44,7 +44,7 @@ function CharacterCard({ card }) {
         </div>
       </div>
       <div className={styles.CharacterCardAttributes}>
-        <h1 id={styles.CharAttr}>Character Attributes</h1>
+        <h1 className={styles.CharAttr}>Character Attributes</h1>
         <p>
           <em>Speed</em> : {Characters.speed}
         </p>
@@ -57,7 +57,7 @@ function CharacterCard({ card }) {
         </p>
       </div>
       <div className={styles.goToGame}>
-        <button id={styles.clickToGame} onClick={handlePlayClick}>
+        <button className={styles.clickToGame} onClick={handlePlayClick}>
           Let&apos;s play
         </button>
       </div>
