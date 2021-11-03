@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 import CharacterCard from './CharacterCard';
-import './CharacterSelect.css';
+import styles from '../components/style/CharacterSelect.module.css';
 
 function CharacterSelect() {
   const [cards, setCards] = useState([]);
@@ -17,10 +17,10 @@ function CharacterSelect() {
   }, []);
 
   return (
-    <div className="Character-Select">
-      <h1>Choisis ton Héro!</h1>
+    <div className={styles.CharacterSelect}>
+      <h1 id={styles.hero}>Choose your Hero!</h1>
 
-      <div className="Characters">
+      <div className={styles.Characters}>
         {cards.map((card) => (
           <CharacterCard key={card.index} card={card} />
         ))}

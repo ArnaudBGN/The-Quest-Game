@@ -1,0 +1,7 @@
+#hero {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  color: black;
+  border-style: groove;
+}

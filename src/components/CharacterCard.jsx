@@ -2,43 +2,8 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import './CharacterCard.css';
-
-const objectIMG = [
-  {
-    race: 'half-orc',
-    img: './src/images/Perso_Half-Orc.png',
-    force: 60,
-    spells: [
-      {
-        index: 1,
-        name: 'Polymorph',
-        description: 'Can change his appearance to trick his opponent',
-      },
-      {
-        index: 2,
-        name: 'Slave-banner',
-        description:
-          'This spell requires a rod or staff. By stamping one end against the ground and casting the spell, it conjures and unfurls a war banner attached to the head of the staff',
-      },
-    ],
-  },
-  {
-    race: 'dwarf',
-    img: './src/images/Perso-Dwarf.png',
-    force: 35,
-  },
-  {
-    race: 'elf',
-    img: './src/images/Perso-Elf.png',
-    force: 25,
-  },
-  {
-    race: 'human',
-    img: '',
-    force: 45,
-  },
-];
+import objectIMG from '../data/CharacterData';
+import styles from '../components/style/CharacterCard.module.css';
 
 function CharacterCard({ card }) {
   const [Characters, SetCharacters] = useState([]);
@@ -56,8 +21,8 @@ function CharacterCard({ card }) {
   }
 
   return (
-    <div className="CharacterCard-container">
-      <div className="CharacterCard-top">
+    <div className={styles.CharacterCardContainer}>
+      <div className={styles.CharacterCardImg}>
         {Characters.index &&
           objectIMG
             .filter((elem) => elem.race === Characters.index)
@@ -65,12 +30,10 @@ function CharacterCard({ card }) {
               <img src={elem.img} alt={elem.race} />;
             })}
 
-        <div className="CharacterCard-description">
+        <div className={styles.CharacterCardDescription}>
+          <h1 id={styles.CharDesc}>Character Description</h1>
           <p>
             <em>Race</em> : {Characters.name}
-          </p>
-          <p>
-            <em>Speed</em> : {Characters.speed}
           </p>
           <p>
             <em>Description</em> : {Characters.alignment}
@@ -80,18 +43,24 @@ function CharacterCard({ card }) {
           </p>
         </div>
       </div>
-      <div className="CharacterCard-attributes">
-        <div className="CharacterCard-stats">
-          <p>Force : 35</p>
-        </div>
-        <div className="CharacterCard-spells">
-          <p>
-            Spells:
-            <li>Polymorphe</li>
-          </p>
-        </div>
+      <div className={styles.CharacterCardAttributes}>
+        <h1 id={styles.CharAttr}>Character Attributes</h1>
+        <p>
+          <em>Speed</em> : {Characters.speed}
+        </p>
+        <p>Strength: 30</p>
+        <p>
+          Spells:
+          <li>Spell 1</li>
+          <li>Spell 2</li>
+          <li>Spell 3</li>
+        </p>
       </div>
-      <button onClick={handlePlayClick}>Let&apos;s play</button>
+      <div className={styles.goToGame}>
+        <button id={styles.clickToGame} onClick={handlePlayClick}>
+          Let&apos;s play
+        </button>
+      </div>
     </div>
   );
 }
