@@ -1,0 +1,46 @@
+.wrapper {
+  display: block;
+  color: #e4d2c8;
+  background-color: #3c281d;
+  width: 40%;
+  border: 2px solid black;
+  padding-right: 15px;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding-bottom: 40px;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.labelName {
+  justify-content: center;
+  display: flex;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-style: oblique;
+  height: 20%;
+  font-size: 25px;
+  align-items: center;
+  padding-top: 25px;
+}
+
+.windowName {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  padding-left: 10px;
+  border-left-width: 2px;
+  margin-left: 130px;
+  margin-bottom: 30px;
+}
+
+.nextButton {
+  border-radius: 10px;
+  height: 34px;
+  width: 74px;
+  padding: 5px;
+  margin-top: 30px;
+  margin-left: 20px;
+}
