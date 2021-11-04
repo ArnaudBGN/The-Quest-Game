@@ -1,44 +1,40 @@
-const story = [
-  {
-    id: '0',
+const username = localStorage.getItem('username');
+const story = {
+  0: {
     image: 'https://picsum.photos/400/299',
     route: {
       action: '',
       require: '',
       text: [
-        'This is a very cool RPG dialog message.',
-        'If you would like to see more awesome stuff, check out the other writeups at codeworkshop.dev!',
-        'Remember to wash your hands!',
+        `Debout ${username} !!!!`,
+        `Vous vous réveillez allongé par terre. Une forte douleur à la tête vous empêche de vous resaisir.`,
+        `Vous vous relevez et sentez que vous repennez vos esprit petit à petit`,
+        `Vous sentez que vous avez pris un sacré coup sur la tête ! Vous avez un mauvais présentiment.`,
+        `Vous n'avez aucune idée d'où vous êtes`,
+        `Que faites-vous ?`,
       ],
       choices: [
         {
           type: 'button',
-          choiceText: 'Aller à gauche',
-          choiceMade: 'gauche',
+          choiceText: 'Regarder autour de vous',
+          choiceMade: 'lookAround',
           nextId: '1',
         },
         {
           type: 'button',
-          choiceText: 'Aller tout droit',
-          choiceMade: 'tout-droit',
+          choiceText: 'Partir',
+          choiceMade: 'leave',
           nextId: '2',
-        },
-        {
-          type: 'button',
-          choiceText: 'Aller à droite',
-          choiceMade: 'droite',
-          nextId: '3',
         },
       ],
     },
   },
-  {
-    id: '1',
+  1: {
     image: 'https://picsum.photos/400/303',
     route: {
-      action: 'gauche',
+      action: 'lookAround',
       require: '',
-      text: ['Vous êtes arriver à gauche', 'Où voulez-vous aller'],
+      text: [],
       choices: [
         {
           type: 'button',
@@ -55,8 +51,7 @@ const story = [
       ],
     },
   },
-  {
-    id: '2',
+  2: {
     image: 'https://picsum.photos/400/302',
     route: {
       action: 'tout droit',
@@ -70,8 +65,7 @@ const story = [
       ],
     },
   },
-  {
-    id: '3',
+  3: {
     image: 'https://picsum.photos/400/301',
     route: {
       action: 'gauche',
@@ -93,6 +87,13 @@ const story = [
       ],
     },
   },
-];
+};
 
-export default story;
+export const getStory = (id) => {
+  // eslint-disable-next-line no-undef
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(story[id]);
+    }, 0);
+  });
+};
