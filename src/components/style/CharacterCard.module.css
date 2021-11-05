@@ -1,74 +1,23 @@
-.CharacterCardContainer {
-  margin-left: auto;
-  margin-right: auto;
-  width: 95vw;
-  height: 70%;
-  border-radius: 2px;
+.CharacterCard {
+  background-color: rgba(31, 31, 31, 0.6);
+  color: goldenrod;
+  margin: 1rem 0;
+  border-radius: 10px;
 }
 
-.CharacterCardDescription {
-  border-style: ridge;
-  margin: 2rem;
-}
-
-.CharacterCardDescription p {
+.PlayButton {
   display: flex;
-  margin: 1rem;
-}
-
-.CharDesc {
-  border-style: ridge;
-  margin: 2vw;
-  display: flex;
-  font-size: 20px;
-  justify-content: center;
-}
-
-.CharacterCardAttributes {
-  border-style: ridge;
-  margin: 2rem;
-}
-
-.CharacterCardAttributes p {
-  margin: 1rem;
-}
-
-.CharAttr {
-  border-style: ridge;
-  margin: 2vw;
-  display: flex;
-  font-size: 20px;
-  justify-content: center;
-}
-
-.card {
-  margin-bottom: 2rem;
-}
-
-.card p {
-  color: black;
-}
-
-.CharImg {
-  border-style: double;
-  border-color: green;
-  height: 35vh;
-  width: 35vw;
-}
-
-.goToGame {
-  display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .clickToGame {
-  margin-bottom: 1rem;
-  padding: 30px 80px;
+  margin: 1rem;
+  padding: 10px 25px;
   background-image: linear-gradient(225deg, #404702 0%, #3c281d 50%, #6f0b00 100%, #e67a00);
   position: relative;
   overflow: hidden;
   border-radius: 30px;
-  font-size: medium;
+  font-size: 1rem;
   color: #f3f1ef;
   cursor: pointer;
   transition: all 0.5s;

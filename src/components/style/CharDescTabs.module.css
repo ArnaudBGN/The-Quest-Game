@@ -1,0 +1,32 @@
+.TabsContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 30px;
+  color: goldenrod;
+  font-weight: bold;
+  background: rgb(128, 42, 42, 0.5);
+  border-style: double;
+  border-spacing: 1rem;
+  border-radius: 10px;
+}
+
+.CharacterCardContainer {
+  display: flex;
+  flex-flow: column wrap;
+  width: 40vw;
+  height: 30vh;
+  border-top: none;
+}
+
+.CharacterCardContainer p {
+  margin: 1rem;
+}
+
+.CharacterCardAttributes ul {
+  margin: 1rem;
+}
+
+.CharacterCardAttributes ul li {
+  margin: 1rem;
+}
