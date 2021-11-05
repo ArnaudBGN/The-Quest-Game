@@ -34,20 +34,34 @@ const story = {
     route: {
       action: 'lookAround',
       require: '',
-      text: [],
+      text: [
+        `Vous contenplez les lieux qui vous entoure. Cela vous semble familier mais vous ne vous souvenez toujours pas d'où vous êtes`,
+        `Vous êtes au beau milieu d'un sacré bordel. Des corps étalés au sol, des habits éparpillés un peu partout et surtout une odeur qui combine une mélange subtile de vomit et d'alchol ,Tout d'un coup, vous êtes pris d'un sursaut de panique et vous ne sentez plus votre sac à dos peser sur vos épaules`,
+        `Que faites vous ?`,
+      ],
       choices: [
         {
           type: 'button',
-          choiceText: 'regarder à gauche',
-          choiceMade: 'gauche',
+          choiceText: 'Fouiller la zone',
+          choiceMade: 'search',
           nextId: '1-1',
         },
         {
           type: 'button',
-          choiceText: 'Retourner en arrière',
-          choiceMade: 'arriere',
-          nextId: '0',
+          choiceText: 'Paniquer et tourner en rond en levant les bras',
+          choiceMade: 'panic',
+          nextId: '2',
         },
+      ],
+    },
+  },
+  '1-1': {
+    image: 'https://picsum.photos/400/306',
+    route: {
+      action: 'search',
+      text: [
+        `Vous fouillez les alentours. Vous regarder un peu partout dans ce qui resemble à un campement mais en beaucoup plus grand.`,
+        `Beaucoup, beaucoup.... BEAUCOUP plus grand.`,
       ],
     },
   },
