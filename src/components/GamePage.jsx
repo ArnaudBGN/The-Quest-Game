@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 import GameDialog from './GameDialog';
 import ButtonChoices from './ButtonChoices';
+import InputChoice from './InputChoice';
 import { getStory } from '../data/Story';
 
 import styles from './style/GamePage.module.css';
-import InputChoice from './InputChoice';
 
 function GamePage() {
   const [routeId, setRouteId] = useState(0);
@@ -36,20 +36,24 @@ function GamePage() {
           </div>
           <div className={styles.GamePageChoices}>
             {currentMessage === currentStory?.route.text.length - 1
-              ? currentStory?.route.choices.map((choice, index) =>
-                  choice.type === 'button' ? (
-                    <ButtonChoices
-                      key={index}
-                      text={choice.choiceText}
-                      choice={choice.choiceMade}
-                      nextId={choice.nextId}
-                      setRouteId={setRouteId}
-                      setCurrentMessage={setCurrentMessage}
-                    />
-                  ) : (
-                    <InputChoice checkAnswer={choice.checkAnswer} setRouteId={setRouteId} setCurrentMessage={setCurrentMessage} />
-                  ),
-                )
+              ? currentStory?.route.choices.map((choice, index) => {
+                  switch (choice.type) {
+                    case 'button':
+                      return (
+                        <ButtonChoices
+                          key={index}
+                          text={choice.choiceText}
+                          choice={choice.choiceMade}
+                          nextId={choice.nextId}
+                          state={choice.state ? choice.state : null}
+                          setRouteId={setRouteId}
+                          setCurrentMessage={setCurrentMessage}
+                        />
+                      );
+                    case 'input':
+                      return <InputChoice checkAnswer={choice.checkAnswer} setRouteId={setRouteId} setCurrentMessage={setCurrentMessage} />;
+                  }
+                })
               : null}
           </div>
         </div>
