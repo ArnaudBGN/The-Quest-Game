@@ -2,10 +2,11 @@ import React from 'react';
 
 import styles from './style/ButtonChoice.module.css';
 
-function ButtonChoices({ text, nextId, setRouteId, setCurrentMessage }) {
+function ButtonChoices({ text, nextId, points, score, setRouteId, setCurrentMessage, setScore }) {
   const handleClick = () => {
     setRouteId(nextId);
     setCurrentMessage(0);
+    setScore(() => (score += points));
   };
 
   return (

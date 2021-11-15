@@ -2,6 +2,7 @@
   display: block;
   color: #e4d2c8;
   background-color: #3c281d;
+  box-shadow: 15px 20px 15px #1f1f1f;
   width: 40%;
   border: 2px solid black;
   padding-right: 15px;
@@ -20,6 +21,7 @@
   display: flex;
   font-family: Comic Sans MS, Comic Sans, cursive;
   font-style: oblique;
+
   height: 20%;
   font-size: 25px;
   align-items: center;
@@ -27,6 +29,7 @@
 }
 
 .windowName {
+  border-radius: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 15px;

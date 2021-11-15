@@ -12,6 +12,7 @@ function GamePage() {
   const [routeId, setRouteId] = useState('0');
   const [currentMessage, setCurrentMessage] = useState(0);
   const [countMessage, setCountMessage] = useState(1);
+  const [score, setScore] = useState(0);
 
   useEffect(() => {
     setCurrentStory(story.filter((elem) => elem.id === routeId));
@@ -40,11 +41,21 @@ function GamePage() {
               text={choice.choiceText}
               choice={choice.choiceMade}
               nextId={choice.nextId}
+              points={choice.points}
+              score={score}
               setRouteId={setRouteId}
               setCurrentMessage={setCurrentMessage}
+              setScore={setScore}
             />
           ) : (
-            <InputChoice checkAnswer={choice.checkAnswer} setRouteId={setRouteId} setCurrentMessage={setCurrentMessage} />
+            <InputChoice
+              choice
+              Answer={choice.choiceAnswer}
+              score={score}
+              setRouteId={setRouteId}
+              setCurrentMessage={setCurrentMessage}
+              setScore={setScore}
+            />
           ),
         )}
       </div>
