@@ -7,16 +7,25 @@
 }
 
 .hero {
-  font-size: 2rem;
   display: flex;
   justify-content: center;
-  color: black;
-  border-style: groove;
-  background-size: 100%;
+  border-style: solid;
+  border-color: whitesmoke;
+  background: black;
+  opacity: 0.8;
+}
+
+.hero p {
+  font-size: 2rem;
+  color: whitesmoke;
 }
 
 .Characters {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  margin: 1rem;
+}
+
+@media screen and (min-width: 700px) {
 }

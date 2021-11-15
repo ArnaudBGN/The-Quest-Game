@@ -1,8 +1,20 @@
 .CharacterCard {
-  background-color: rgba(31, 31, 31, 0.6);
-  color: goldenrod;
+  background-color: rgba(31, 31, 31, 0.95);
+  color: whitesmoke;
   margin: 1rem 0;
   border-radius: 10px;
+  border-style: solid;
+}
+.CharacterCardImg {
+  display: flex;
+  justify-content: center;
+}
+
+.CharacterCardImg img {
+  display: flex;
+  justify-content: center;
+  height: 35vh;
+  margin: 0.5rem;
 }
 
 .PlayButton {
@@ -18,7 +30,7 @@
   overflow: hidden;
   border-radius: 30px;
   font-size: 1rem;
-  color: #f3f1ef;
+  color: whitesmoke;
   cursor: pointer;
   transition: all 0.5s;
 }
@@ -28,4 +40,15 @@
 }
 
 @media screen and (min-width: 700px) {
+  .CharacterCardImg {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;
+  }
+
+  .CharacterCardImg img {
+    display: flex;
+    justify-content: center;
+    height: 40vh;
+  }
 }
