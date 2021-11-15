@@ -91,9 +91,81 @@ const story = {
         `Quel bordel là dedans ! L'odeur vous rappel quelque chose...`,
         `Après avoir sniffer, vous remarquez que vous portez la même odeur.`,
         `Malgré le dégoût prononcé qui peut se lire sur votre visage, vous êtes confiant que votre barda se trouve ici`,
-        `IL EST LAAAAAAAAA !!! Vous êtes tellement que vous hurlez de joie.`,
+        `IL EST LAAAAAAAAA !!! Vous êtes tellement de l'avoir retrouvé que vous hurlez de joie.`,
         `Manque de bol, votre sac se trouve à côté d'un lit où dort le genre de gars qu'il ne faut mieux pas réveiller.`,
-        ``,
+      ],
+      choices: [
+        {
+          type: 'button',
+          choiceText: `Assomer le gaillard`,
+          choiceMade: 'stun',
+          nextId: '1-1a-1a-1',
+        },
+        {
+          type: 'button',
+          choiceText: `Récupérer votre sac sans faire de bruit`,
+          choiceMade: 'sneak',
+          nextId: '1-1a-1a-2',
+        },
+      ],
+    },
+  },
+  '1-1a-1a-1': {
+    image: '',
+    route: {
+      action: 'stun',
+      text: [`Vous rammassez un haume qui traine par terre et vous rapprochez du gaillard en question.`, `D'un coup sec, vous tentez de l'assommer`],
+    },
+    choices: [
+      {
+        type: 'button',
+        choiceText: 'BANG !',
+        choiceMade: 'bang',
+        nextId: Math.floor(Math.random() * 20) > 12 ? '1-1a-1a-1a' : '1-1a-1a-1b',
+      },
+    ],
+  },
+  '1-1a-1a-1a': {
+    image: '',
+    route: {
+      text: [
+        `Et Boooooooooom. Vous frappez fort et, aie aie aie, vous fendez de se pauvre type.`,
+        `Pas peu fière de votre fendage de crâne, vous ramassez votre sac`,
+        `Vous vérifiez le contenu... Tout à l'air d'être là.`,
+      ],
+      choices: [
+        {
+          type: 'button',
+          choiceText: `Jeter un dernier coup d'oeil`,
+          nextId: '1-1a-1a-1a-1',
+        },
+        {
+          type: 'button',
+          choiceText: `Je me tire d'ici !`,
+          nextId: '2',
+        },
+      ],
+    },
+  },
+  '1-1a-1a-1b': {
+    image: '',
+    route: {
+      text: [
+        `C'est ce qui s'appel un échec !`,
+        `Vous vous êtes cru plus fort que vous ne le pensiez. Le haume, beaucoup plus lourd qu'il n'en a l'air vous emporte avec lui.`,
+        `Vous vous vautrez royalement par terre et en prime vous réveillez votre gaillard et il n'a pas l'air très joyeux`,
+        `Le Gaillard: Tu ne le sais pas encore, mais tu es déjà mort !`,
+        `Vous: Naniiiiiiiii !`,
+        `Il fait tout noir d'un coup et il fait sacrément froid...`,
+        `Félicitation, vous êtes mort !`,
+      ],
+      choices: [
+        {
+          type: 'button',
+          choiceText: `Fin`,
+          nextId: 'End',
+          state: false,
+        },
       ],
     },
   },
@@ -113,7 +185,7 @@ const story = {
           type: 'button',
           choiceText: 'Courrir vite et loin',
           choiceMade: 'run',
-          nextId: '2-1',
+          nextId: '1-1-end',
         },
         {
           type: 'button',
@@ -124,7 +196,7 @@ const story = {
       ],
     },
   },
-  '2-1': {
+  '1-1-end': {
     image: 'https://picsum.photos/400/309',
     route: {
       action: 'end',
