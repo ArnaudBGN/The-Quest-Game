@@ -240,23 +240,6 @@ const story = {
   },
   2: {
     media: {
-      type: 'image',
-      src: 'https://picsum.photos/400/299',
-    },
-    route: {
-      action: 'tout droit',
-      require: '',
-      text: ['Vous avancez tout droit', 'Vous tombez sur une enigme', 'Quel est le muscle ?'],
-      choices: [
-        {
-          type: 'input',
-          checkAnswer: (answer) => (answer === 'kamoolox' ? '2-1' : '0'),
-        },
-      ],
-    },
-  },
-  3: {
-    media: {
       type: 'video',
       src: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1',
     },
@@ -276,6 +259,23 @@ const story = {
           choiceText: 'Fuir',
           choiceMade: 'flee',
           nextId: '3-2',
+        },
+      ],
+    },
+  },
+  3: {
+    media: {
+      type: 'image',
+      src: 'https://picsum.photos/400/299',
+    },
+    route: {
+      action: 'tout droit',
+      require: '',
+      text: ['Vous avancez tout droit', 'Vous tombez sur une enigme', 'Quel est le muscle ?'],
+      choices: [
+        {
+          type: 'input',
+          checkAnswer: (answer) => (answer === 'kamoolox' ? '2-1' : '0'),
         },
       ],
     },
