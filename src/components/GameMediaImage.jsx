@@ -1,7 +1,11 @@
 import React from 'react';
 
-function GameMediaImage() {
-  return <div></div>;
+function GameMediaImage({ src }) {
+  return (
+    <div>
+      <img src={src} alt="" />
+    </div>
+  );
 }
 
 export default GameMediaImage;
