@@ -12,7 +12,6 @@ function GamePage() {
   const [currentStory, setCurrentStory] = useState();
   const [currentMessage, setCurrentMessage] = useState(0);
   const [countMessage, setCountMessage] = useState(1);
-  const [score, setScore] = useState(0);
 
   useEffect(() => {
     getStory(routeId).then((story) => setCurrentStory(story));
@@ -47,22 +46,13 @@ function GamePage() {
                           choice={choice.choiceMade}
                           nextId={choice.nextId}
                           points={choice.points}
-                          score={score}
                           state={choice.state ? choice.state : null}
                           setRouteId={setRouteId}
                           setCurrentMessage={setCurrentMessage}
                         />
                       );
                     case 'input':
-                      return (
-                        <InputChoice
-                          choiceAnswer={choice.choiceAnswer}
-                          score={score}
-                          setRouteId={setRouteId}
-                          setCurrentMessage={setCurrentMessage}
-                          setScore={setScore}
-                        />
-                      );
+                      return <InputChoice choiceAnswer={choice.choiceAnswer} setRouteId={setRouteId} setCurrentMessage={setCurrentMessage} />;
                   }
                 })
               : null}
