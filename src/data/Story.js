@@ -115,15 +115,15 @@ const story = {
     route: {
       action: 'stun',
       text: [`Vous rammassez un haume qui traine par terre et vous rapprochez du gaillard en question.`, `D'un coup sec, vous tentez de l'assommer`],
+      choices: [
+        {
+          type: 'button',
+          choiceText: 'BANG !',
+          choiceMade: 'bang',
+          nextId: Math.floor(Math.random() * 20) > 12 ? '1-1a-1a-1a' : '1-1a-1a-1b',
+        },
+      ],
     },
-    choices: [
-      {
-        type: 'button',
-        choiceText: 'BANG !',
-        choiceMade: 'bang',
-        nextId: Math.floor(Math.random() * 20) > 12 ? '1-1a-1a-1a' : '1-1a-1a-1b',
-      },
-    ],
   },
   '1-1a-1a-1a': {
     image: '',
