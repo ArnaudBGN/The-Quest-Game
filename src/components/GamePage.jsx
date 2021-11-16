@@ -2,64 +2,74 @@ import React, { useEffect, useState } from 'react';
 
 import GameDialog from './GameDialog';
 import ButtonChoices from './ButtonChoices';
-import story from '../data/Story';
+import InputChoice from './InputChoice';
+import { getStory } from '../data/Story';
 
 import styles from './style/GamePage.module.css';
-import InputChoice from './InputChoice';
 
 function GamePage() {
-  const [currentStory, setCurrentStory] = useState([story[0]]);
-  const [routeId, setRouteId] = useState('0');
+  const [routeId, setRouteId] = useState(0);
+  const [currentStory, setCurrentStory] = useState();
   const [currentMessage, setCurrentMessage] = useState(0);
   const [countMessage, setCountMessage] = useState(1);
   const [score, setScore] = useState(0);
 
   useEffect(() => {
-    setCurrentStory(story.filter((elem) => elem.id === routeId));
+    getStory(routeId).then((story) => setCurrentStory(story));
     setCountMessage(1);
   }, [routeId]);
 
   return (
-    <div className={styles.GamePageContainer}>
-      <div className={styles.GamePageScene}>
-        <img src={currentStory[0].image} alt="" />
-      </div>
-      <div className={styles.GamePageSceneText}>
-        <GameDialog
-          messages={currentStory[0].route.text}
-          currentMessage={currentMessage}
-          setCurrentMessage={setCurrentMessage}
-          countMessage={countMessage}
-          setCountMessage={setCountMessage}
-        />
-      </div>
-      <div className={styles.GamePageChoices}>
-        {currentStory[0].route.choices.map((choice, index) =>
-          choice.type === 'button' ? (
-            <ButtonChoices
-              key={index}
-              text={choice.choiceText}
-              choice={choice.choiceMade}
-              nextId={choice.nextId}
-              points={choice.points}
-              score={score}
-              setRouteId={setRouteId}
+    <>
+      {currentStory && (
+        <div className={styles.GamePageContainer}>
+          <div className={styles.GamePageScene}>
+            <img src={currentStory?.image} alt="" />
+          </div>
+          <div className={styles.GamePageSceneText}>
+            <GameDialog
+              messages={currentStory?.route.text}
+              currentMessage={currentMessage}
               setCurrentMessage={setCurrentMessage}
-              setScore={setScore}
+              countMessage={countMessage}
+              setCountMessage={setCountMessage}
             />
-          ) : (
-            <InputChoice
-              choice
-              Answer={choice.choiceAnswer}
-              score={score}
-              setRouteId={setRouteId}
-              setCurrentMessage={setCurrentMessage}
-              setScore={setScore}
-            />
-          ),
-        )}
-      </div>
-    </div>
+          </div>
+          <div className={styles.GamePageChoices}>
+            {currentMessage === currentStory?.route.text.length - 1
+              ? currentStory?.route.choices.map((choice, index) => {
+                  switch (choice.type) {
+                    case 'button':
+                      return (
+                        <ButtonChoices
+                          key={index}
+                          text={choice.choiceText}
+                          choice={choice.choiceMade}
+                          nextId={choice.nextId}
+                          points={choice.points}
+                          score={score}
+                          state={choice.state ? choice.state : null}
+                          setRouteId={setRouteId}
+                          setCurrentMessage={setCurrentMessage}
+                        />
+                      );
+                    case 'input':
+                      return (
+                        <InputChoice
+                          choiceAnswer={choice.choiceAnswer}
+                          score={score}
+                          setRouteId={setRouteId}
+                          setCurrentMessage={setCurrentMessage}
+                          setScore={setScore}
+                        />
+                      );
+                  }
+                })
+              : null}
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 

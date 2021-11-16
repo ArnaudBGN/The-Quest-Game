@@ -18,7 +18,9 @@ function CharacterSelect() {
 
   return (
     <div className={styles.CharacterSelect}>
-      <h1 className={styles.hero}>Choose your Hero!</h1>
+      <h1 className={styles.hero}>
+        <p>Choose your Hero!</p>
+      </h1>
       <div className={styles.Characters}>
         {cards.map((card) => (
           <CharacterCard key={card.index} card={card} />
