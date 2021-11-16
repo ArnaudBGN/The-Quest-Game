@@ -1,8 +1,10 @@
 import React from 'react';
 
+import styles from './style/GameMediaVideo.module.css';
+
 function GameMediaVideo({ src }) {
   return (
-    <div>
+    <div className={styles.GameMediaVideo}>
       <iframe
         title="video"
         src={src}
