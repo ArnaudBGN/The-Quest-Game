@@ -1,5 +1,4 @@
 .GameFinishPageContainer {
-  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,4 +41,10 @@
   object-fit: cover;
   transform: translate(-50%, -50%);
   overflow: hidden;
+}
+
+.GameFinishChoices > button {
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
 }
