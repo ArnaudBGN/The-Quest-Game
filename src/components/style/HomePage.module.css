@@ -7,7 +7,7 @@
 
 .homeText {
   display: flex;
-  font-family: URW Chancery L, cursive;
+  font-family: Brush Script MT, Brush Script Std, cursive;
   font-style: oblique;
   font-size: 40px;
   color: black;
@@ -17,7 +17,7 @@
 
 .homeTitle {
   color: black;
-  font-family: URW Chancery L, cursive;
+  font-family: Brush Script MT, Brush Script Std, cursive;
   font-style: oblique;
   font-size: 25px;
   display: flex;
