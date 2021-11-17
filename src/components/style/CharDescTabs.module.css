@@ -1,10 +1,7 @@
 .TabsContent {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 45px;
+  justify-content: space-around;
   color: rgb(233, 201, 120);
-  font-weight: bold;
   background: rgb(128, 42, 42, 0.5);
   border-style: double;
   border-spacing: 1rem;
@@ -12,6 +9,8 @@
 
 .TabsContent button {
   margin: 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
   padding: 2px 10px;
   background-image: linear-gradient(225deg, #404702 0%, #3c281d 50%, #6f0b00 100%, #e67a00);
   position: relative;
@@ -33,27 +32,56 @@
 
 .CharacterCardContainer em {
   color: lightskyblue;
-  font-size: 18px;
+  font-size: 17px;
 }
 
-.CharacterCardAttributes ul {
+.characterCardDesc2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.characterCardEquipment {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.CharacterCardSpells ul {
   margin: 0.5rem;
 }
 
-.CharacterCardAttributes ul li {
+.CharacterCardSpells ul p {
+  font-size: 18px;
+  font-style: italic;
+  color: lightskyblue;
+}
+
+.CharacterCardSpells ul li {
+  font-size: 17px;
+  color: indianred;
   margin: 1rem;
+  font-weight: bold;
+}
+
+.CharacterCardSpells ul li p {
+  font-size: 16px;
+  color: whitesmoke;
 }
 
 @media screen and (min-width: 700px) {
-  .TabsContent {
-    height: 30px;
-  }
-
   .TabsContent button {
     font-size: 1rem;
   }
+
   .CharacterCardContainer {
     width: 40vw;
-    height: 60vh;
+    height: 70vh;
+  }
+
+  .characterCardEquipment {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
   }
 }
