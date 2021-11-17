@@ -29,7 +29,7 @@ function CharacterCard({ card }) {
       {Characters && characterData && (
         <div className={styles.CharacterCard}>
           <div className={styles.CharacterCardImg}>
-            <img className={styles.CharImg} src={characterData.img} alt={characterData.name} />
+            <img className={styles.CharImg} src={characterData.img} alt={characterData.race} />
           </div>
           <CharDescTabs key={card.index} card={card} />
           <div className={styles.PlayButton}>

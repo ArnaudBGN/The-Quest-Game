@@ -20,6 +20,7 @@
   cursor: pointer;
   transition: all 0.5s;
 }
+
 .CharacterCardContainer {
   display: flex;
   flex-flow: column wrap;
@@ -70,13 +71,12 @@
 }
 
 @media screen and (min-width: 700px) {
-  .TabsContent button {
-    font-size: 1rem;
+  .CharacterCardContainer {
+    height: 70vh;
   }
 
-  .CharacterCardContainer {
-    width: 40vw;
-    height: 70vh;
+  .TabsContent button {
+    font-size: 1rem;
   }
 
   .characterCardEquipment {
