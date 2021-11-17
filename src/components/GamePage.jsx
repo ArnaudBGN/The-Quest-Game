@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+import GameMediaDisplay from './GameMediaDisplay';
 import GameDialog from './GameDialog';
 import ButtonChoices from './ButtonChoices';
 import InputChoice from './InputChoice';
@@ -23,7 +24,7 @@ function GamePage() {
       {currentStory && (
         <div className={styles.GamePageContainer}>
           <div className={styles.GamePageScene}>
-            <img src={currentStory?.image} alt="" />
+            <GameMediaDisplay media={currentStory?.media} />
           </div>
           <div className={styles.GamePageSceneText}>
             <GameDialog

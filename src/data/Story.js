@@ -1,7 +1,10 @@
 const username = localStorage.getItem('username');
 const story = {
   0: {
-    image: 'https://picsum.photos/400/299',
+    media: {
+      type: 'image',
+      src: 'https://picsum.photos/400/299',
+    },
     route: {
       action: '',
       require: '',
@@ -24,13 +27,16 @@ const story = {
           type: 'button',
           choiceText: 'Partir',
           choiceMade: 'leave',
-          nextId: '2',
+          nextId: '3',
         },
       ],
     },
   },
   1: {
-    image: 'https://picsum.photos/400/303',
+    media: {
+      type: 'image',
+      src: 'https://picsum.photos/400/299',
+    },
     route: {
       action: 'lookAround',
       require: '',
@@ -56,7 +62,10 @@ const story = {
     },
   },
   '1-1a': {
-    image: 'https://picsum.photos/400/306',
+    media: {
+      type: 'image',
+      src: 'https://picsum.photos/400/299',
+    },
     route: {
       action: 'search',
       text: [
@@ -83,7 +92,10 @@ const story = {
     },
   },
   '1-1a-1a': {
-    image: 'https://picsum.photos/400/308',
+    media: {
+      type: 'image',
+      src: 'https://picsum.photos/400/299',
+    },
     route: {
       action: 'tent',
       text: [
@@ -111,7 +123,10 @@ const story = {
     },
   },
   '1-1a-1a-1': {
-    image: '',
+    media: {
+      type: 'image',
+      src: 'https://picsum.photos/400/299',
+    },
     route: {
       action: 'stun',
       text: [`Vous rammassez un haume qui traine par terre et vous rapprochez du gaillard en question.`, `D'un coup sec, vous tentez de l'assommer`],
@@ -126,7 +141,10 @@ const story = {
     },
   },
   '1-1a-1a-1a': {
-    image: '',
+    media: {
+      type: 'image',
+      src: 'https://picsum.photos/400/299',
+    },
     route: {
       text: [
         `Et Boooooooooom. Vous frappez fort et, aie aie aie, vous fendez de se pauvre type.`,
@@ -148,7 +166,10 @@ const story = {
     },
   },
   '1-1a-1a-1b': {
-    image: '',
+    media: {
+      type: 'image',
+      src: 'https://picsum.photos/400/299',
+    },
     route: {
       text: [
         `C'est ce qui s'appel un échec !`,
@@ -170,7 +191,10 @@ const story = {
     },
   },
   '1-1b': {
-    image: 'https://picsum.photos/400/307',
+    media: {
+      type: 'image',
+      src: 'https://picsum.photos/400/299',
+    },
     route: {
       action: 'panic',
       text: [
@@ -197,7 +221,10 @@ const story = {
     },
   },
   '1-1-end': {
-    image: 'https://picsum.photos/400/309',
+    media: {
+      type: 'image',
+      src: 'https://picsum.photos/400/299',
+    },
     route: {
       action: 'end',
       text: [`Vous Courrez vite, le plus vite que vous n'ayez jamais courru.`, `Dommage que l'aventure se termine déjà.`],
@@ -212,21 +239,10 @@ const story = {
     },
   },
   2: {
-    image: 'https://picsum.photos/400/302',
-    route: {
-      action: 'tout droit',
-      require: '',
-      text: ['Vous avancez tout droit', 'Vous tombez sur une enigme', 'Quel est le muscle ?'],
-      choices: [
-        {
-          type: 'input',
-          checkAnswer: (answer) => (answer === 'kamoolox' ? '2-1' : '0'),
-        },
-      ],
+    media: {
+      type: 'video',
+      src: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1',
     },
-  },
-  3: {
-    image: 'https://picsum.photos/400/301',
     route: {
       action: 'gauche',
       require: '',
@@ -243,6 +259,23 @@ const story = {
           choiceText: 'Fuir',
           choiceMade: 'flee',
           nextId: '3-2',
+        },
+      ],
+    },
+  },
+  3: {
+    media: {
+      type: 'image',
+      src: 'https://picsum.photos/400/299',
+    },
+    route: {
+      action: 'tout droit',
+      require: '',
+      text: ['Vous avancez tout droit', 'Vous tombez sur une enigme', 'Quel est le muscle ?'],
+      choices: [
+        {
+          type: 'input',
+          checkAnswer: (answer) => (answer === 'kamoolox' ? '2-1' : '0'),
         },
       ],
     },
