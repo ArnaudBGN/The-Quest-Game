@@ -11,10 +11,8 @@
 }
 
 .CharacterCardImg img {
-  display: flex;
-  justify-content: center;
-  height: 35vh;
   margin: 0.5rem;
+  height: 35vh;
 }
 
 .PlayButton {
@@ -40,15 +38,12 @@
 }
 
 @media screen and (min-width: 700px) {
-  .CharacterCardImg {
-    display: flex;
-    justify-content: center;
-    margin: 0.5rem;
+  .CharacterCard {
+    width: 40%;
   }
 
   .CharacterCardImg img {
     display: flex;
     justify-content: center;
-    height: 40vh;
   }
 }
