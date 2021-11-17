@@ -1,23 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
+
+import ScoreContext from '../contexts/ScoreContext';
+
 import styles from './style/GameFinishPage.module.css';
 import Video from '../Assets/Vintage - 55607.mp4';
 
 function GameFinishPage() {
-  const histoiry = useHistory();
+  const history = useHistory();
   const location = useLocation();
   const [isWinned, setIsWinned] = useState(true);
+  const { score } = useContext(ScoreContext);
 
   useEffect(() => {
-    location.state.status !== undefined ? setIsWinned(location.state.status) : null;
+    setIsWinned(location.state.status);
   }, []);
 
   const playAgain = () => {
-    histoiry.push('GamePage');
+    history.push('GamePage');
   };
 
   const goToCharacterSelect = () => {
-    histoiry.push('CharacterSelect');
+    history.push('CharacterSelect');
   };
 
   return (
@@ -27,6 +31,7 @@ function GameFinishPage() {
       </video>
       <div className={styles.GameFinishText}>
         <p className={styles.GameFinishStatus}>{isWinned ? 'Encore une victoire de canard' : 'Vous êtes nul !'}</p>
+        <p className={styles.GameFinishScore}>Score : {score}</p>
         <p className={styles.GameFinishNext}>Que souhaitez-vous faire ?</p>
       </div>
       <div className={styles.GameFinishChoices}>

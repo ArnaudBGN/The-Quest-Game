@@ -28,7 +28,7 @@ const story = {
           type: 'button',
           choiceText: 'Partir',
           choiceMade: 'leave',
-          nextId: '3',
+          nextId: '2',
           points: -10,
         },
       ],
