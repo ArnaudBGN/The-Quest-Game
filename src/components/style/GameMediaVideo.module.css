@@ -1,0 +1,9 @@
+.GameMediaVideo {
+  height: 100%;
+  width: 100%;
+}
+
+.GameMediaVideo > iframe {
+  height: 100%;
+  width: 100%;
+}

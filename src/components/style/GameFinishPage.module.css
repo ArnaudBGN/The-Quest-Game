@@ -1,6 +1,4 @@
 .GameFinishPageContainer {
-  background-size: cover;
-  background-image: url(https://cdn.pixabay.com/photo/2012/03/01/00/21/bridge-19513_960_720.jpg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,8 +8,9 @@
 }
 
 .GameFinishText {
-  margin: 25vh 0;
-  width: 100vw;
+  background-color: #6f0b00;
+  margin: 20vh 0;
+  width: 50vw;
 }
 
 .GameFinishStatus {
@@ -30,3 +29,10 @@
   width: 40vw;
   margin-bottom: 10vh;
 }
+
+.GameFinishChoices > button {
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+}
+

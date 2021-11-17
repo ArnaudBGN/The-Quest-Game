@@ -22,7 +22,7 @@ function GameFinishPage() {
   return (
     <div className={styles.GameFinishPageContainer}>
       <div className={styles.GameFinishText}>
-        <p className={styles.GameFinishStatus}>{isWinned ? 'You Win !!!!' : 'You Lose :('}</p>
+        <p className={styles.GameFinishStatus}>{isWinned ? 'Encore une victoire de canard' : 'Vous êtes nul !'}</p>
         <p className={styles.GameFinishNext}>Que souhaitez-vous faire ?</p>
       </div>
       <div className={styles.GameFinishChoices}>
