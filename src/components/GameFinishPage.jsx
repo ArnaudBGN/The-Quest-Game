@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import styles from './style/GameFinishPage.module.css';
+import Video from '../Assets/Vintage - 55607.mp4';
 
 function GameFinishPage() {
   const histoiry = useHistory();
@@ -8,7 +9,7 @@ function GameFinishPage() {
   const [isWinned, setIsWinned] = useState(true);
 
   useEffect(() => {
-    setIsWinned(location.state.status);
+    location.state.status !== undefined ? setIsWinned(location.state.status) : null;
   }, []);
 
   const playAgain = () => {
@@ -21,6 +22,9 @@ function GameFinishPage() {
 
   return (
     <div className={styles.GameFinishPageContainer}>
+      <video className={styles.BackgroundVideo} autoPlay loop muted>
+        <source src={Video} type="video/mp4" />
+      </video>
       <div className={styles.GameFinishText}>
         <p className={styles.GameFinishStatus}>{isWinned ? 'You Win !!!!' : 'You Lose :('}</p>
         <p className={styles.GameFinishNext}>Que souhaitez-vous faire ?</p>
