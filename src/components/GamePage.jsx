@@ -46,13 +46,14 @@ function GamePage() {
                           text={choice.choiceText}
                           choice={choice.choiceMade}
                           nextId={choice.nextId}
+                          points={choice.points}
                           state={choice.state ? choice.state : null}
                           setRouteId={setRouteId}
                           setCurrentMessage={setCurrentMessage}
                         />
                       );
                     case 'input':
-                      return <InputChoice checkAnswer={choice.checkAnswer} setRouteId={setRouteId} setCurrentMessage={setCurrentMessage} />;
+                      return <InputChoice choiceAnswer={choice.choiceAnswer} setRouteId={setRouteId} setCurrentMessage={setCurrentMessage} />;
                   }
                 })
               : null}
