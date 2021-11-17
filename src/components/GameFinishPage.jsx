@@ -4,7 +4,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 import styles from './style/GameFinishPage.module.css';
 
 function GameFinishPage() {
-  const histoiry = useHistory();
+  const history = useHistory();
   const location = useLocation();
   const [isWinned, setIsWinned] = useState(true);
 
@@ -13,11 +13,11 @@ function GameFinishPage() {
   }, []);
 
   const playAgain = () => {
-    histoiry.push('GamePage');
+    history.push('GamePage');
   };
 
   const goToCharacterSelect = () => {
-    histoiry.push('CharacterSelect');
+    history.push('CharacterSelect');
   };
 
   return (

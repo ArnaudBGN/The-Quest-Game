@@ -142,7 +142,7 @@ const story = {
         {
           type: 'button',
           choiceText: `Je me tire d'ici !`,
-          nextId: '2',
+          nextId: '3',
         },
       ],
     },
