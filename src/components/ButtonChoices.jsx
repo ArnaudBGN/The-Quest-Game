@@ -4,7 +4,7 @@ import ScoreContext from '../contexts/ScoreContext';
 
 import styles from './style/ButtonChoice.module.css';
 
-function ButtonChoices({ text, nextId, points, state, setRouteId, setCurrentMessage }) {
+function ButtonChoices({ text, nextId, points, state, caption, setRouteId, setCurrentMessage }) {
   const history = useHistory();
   const { score, setScore } = useContext(ScoreContext);
 
@@ -15,7 +15,7 @@ function ButtonChoices({ text, nextId, points, state, setRouteId, setCurrentMess
   };
 
   const goToGameFinishPage = () => {
-    history.push('gamefinish', { status: state });
+    history.push('gamefinish', { status: state, caption: caption });
   };
 
   return (

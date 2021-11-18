@@ -193,6 +193,7 @@ const story = {
           choiceText: `Fin`,
           nextId: 'End',
           state: false,
+          caption: 'Vous êtes mort !',
         },
       ],
     },
@@ -267,7 +268,7 @@ const story = {
           type: 'button',
           choiceText: 'Rentrer dans la taverne',
           choiceMade: 'drink',
-          nextId: '2-1',
+          nextId: '2-1-end',
           points: 0,
         },
         {
@@ -292,9 +293,10 @@ const story = {
       choices: [
         {
           type: 'button',
-          choiceText: 'Attaquer',
+          choiceText: 'Fin',
           nextId: 'End',
           state: false,
+          caption: 'Rickrolled',
         },
       ],
     },
@@ -318,7 +320,7 @@ const story = {
           type: 'button',
           choiceText: 'Rentrer dans la taverne',
           choiceMade: 'drink',
-          nextId: '2-1',
+          nextId: '2-1-end',
           points: 0,
         },
         {

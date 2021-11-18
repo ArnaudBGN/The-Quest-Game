@@ -18,6 +18,11 @@
   text-align: center;
 }
 
+.GameFinishCaption {
+  font-size: 3rem;
+  text-align: center;
+}
+
 .GameFinishNext {
   font-size: 2rem;
   text-align: center;
