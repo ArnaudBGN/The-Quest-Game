@@ -1,4 +1,5 @@
 import React from 'react';
+
 import styles from './style/Modal.module.css';
 
 function Modal({ revele, goToCharacterSelect, setUserName }) {
@@ -6,7 +7,6 @@ function Modal({ revele, goToCharacterSelect, setUserName }) {
 
   return revele ? (
     <React.Fragment>
-      {/* <div className={styles.overlay} /> */}
       <div className={styles.wrapper}>
         <label className={styles.labelName} htmlform="name" htmlFor="name">
           Enter your Name

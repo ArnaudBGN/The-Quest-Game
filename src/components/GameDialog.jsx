@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Message from './Message';
 
 import styles from './style/GameDialog.module.css';

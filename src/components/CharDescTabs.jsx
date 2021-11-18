@@ -1,10 +1,11 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
-import styles from '../components/style/CharDescTabs.module.css';
 import { getCharacterData } from '../data/CharacterData';
 
-export default function CharDescTabs({ card }) {
+import styles from '../components/style/CharDescTabs.module.css';
+
+function CharDescTabs({ card }) {
   const [stateTabs, setStateTabs] = useState();
   const [Characters, SetCharacters] = useState();
   const [characterData, setCharacterData] = useState();
@@ -104,3 +105,5 @@ export default function CharDescTabs({ card }) {
     </>
   );
 }
+
+export default CharDescTabs;
