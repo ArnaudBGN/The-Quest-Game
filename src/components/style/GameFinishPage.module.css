@@ -8,9 +8,10 @@
 }
 
 .GameFinishText {
-  background-color: #6f0b00;
-  margin: 20vh 0;
-  width: 50vw;
+  z-index: 200;
+  color: #e4d2c8;
+  margin: 25vh 0;
+  width: 100vw;
 }
 
 .GameFinishStatus {
@@ -29,14 +30,32 @@
 }
 
 .GameFinishChoices {
+  z-index: 200;
   display: flex;
   justify-content: space-around;
   width: 40vw;
   margin-bottom: 10vh;
 }
 
+.BackgroundVideo {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
 .GameFinishChoices > button {
   border-radius: 5px;
   padding: 5px;
   text-align: center;
+}
+.GameFinishScore {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  height: 30%;
 }

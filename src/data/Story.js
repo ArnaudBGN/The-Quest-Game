@@ -4,7 +4,7 @@ const story = {
   0: {
     media: {
       type: 'image',
-      src: 'https://picsum.photos/400/299',
+      src: 'https://cdn.pixabay.com/photo/2018/01/30/22/50/forest-3119826_960_720.jpg',
     },
     route: {
       action: '',
@@ -38,7 +38,7 @@ const story = {
   1: {
     media: {
       type: 'image',
-      src: 'https://picsum.photos/400/299',
+      src: 'https://cdn.pixabay.com/photo/2020/04/20/19/14/landfills-5069482_960_720.jpg',
     },
     route: {
       action: 'lookAround',
@@ -69,7 +69,7 @@ const story = {
   '1-1a': {
     media: {
       type: 'image',
-      src: 'https://picsum.photos/400/299',
+      src: 'https://cdn.pixabay.com/photo/2021/08/13/12/38/tent-6543019_960_720.jpg',
     },
     route: {
       action: 'search',
@@ -101,7 +101,7 @@ const story = {
   '1-1a-1a': {
     media: {
       type: 'image',
-      src: 'https://picsum.photos/400/299',
+      src: 'https://cdn.pixabay.com/photo/2015/04/02/18/03/forest-704077_960_720.jpg',
     },
     route: {
       action: 'tent',
@@ -132,11 +132,11 @@ const story = {
   '1-1a-1a-1': {
     media: {
       type: 'image',
-      src: 'https://picsum.photos/400/299',
+      src: 'https://cdn.pixabay.com/photo/2014/11/20/20/37/autumn-539811_960_720.jpg',
     },
     route: {
       action: 'stun',
-      text: [`Vous rammassez un haume qui traine par terre et vous rapprochez du gaillard en question.`, `D'un coup sec, vous tentez de l'assommer`],
+      text: [`Vous rammassez un heaume qui traine par terre et vous rapprochez du gaillard en question.`, `D'un coup sec, vous tentez de l'assommer`],
       choices: [
         {
           type: 'button',
@@ -150,11 +150,11 @@ const story = {
   '1-1a-1a-1a': {
     media: {
       type: 'image',
-      src: 'https://picsum.photos/400/299',
+      src: 'https://cdn.pixabay.com/photo/2014/07/24/21/35/mortality-401222__340.jpg',
     },
     route: {
       text: [
-        `Et Boooooooooom. Vous frappez fort et, aie aie aie, vous fendez de se pauvre type.`,
+        `Et Boooooooooom. Vous frappez fort et, aie aie aie, vous fendez la tête de se pauvre type.`,
         `Pas peu fière de votre fendage de crâne, vous ramassez votre sac`,
         `Vous vérifiez le contenu... Tout à l'air d'être là.`,
       ],
@@ -175,7 +175,7 @@ const story = {
   '1-1a-1a-1b': {
     media: {
       type: 'image',
-      src: 'https://picsum.photos/400/299',
+      src: 'https://cdn.pixabay.com/photo/2020/10/29/17/40/fantasy-5696828__340.jpg',
     },
     route: {
       text: [
@@ -201,12 +201,12 @@ const story = {
   '1-1b': {
     media: {
       type: 'image',
-      src: 'https://picsum.photos/400/299',
+      src: 'https://t1.pixers.pics/img-c676e9e9/posters-homme-dans-une-foret-sombre.jpg?H4sIAAAAAAAAA42PW07EMAxFt5NK6dh51WkXML-zhCpN0qHQl5ICI1ZPCog_JGRLfsj3WBde1-zGCD6uR0ywTCHMEcZpLlPuUszTR2TIVWuqrmxnhohVt73F5NO2M2V4LZTkTWu4kbbq3l0RLi69sKfj2HMHkNVlnx6FVorP4JcMEgUBWjCtdT4OgVrhZL_X-XBrcCnUhDU9DF729c7xjP-DLQgEMwQxNIMNqAfbS4kFVv8SvrAaiWuyJ_rHJSFyOt0daVpYsbuV64M97_cK_vj53UNRwfUGWoOVQCXtueqvN62tJEm2j9LjKAnHRjVe60YKq6IzqEcUGB1dypdPr0sbnosBAAA=',
     },
     route: {
       action: 'panic',
       text: [
-        `Vous avez le palpitant qui s'emballe, vous vous mettez à transpirer à grosse goûte`,
+        `Vous avez le palpitant qui s'emballe, vous vous mettez à transpirer à grosse goûtte`,
         `Vous vous dites: `,
         `C'est un CAUCHEMAAAAAAAAAAAARD !!!!'`,
         `Il faut absolument que je retrouve mes affaires !`,
@@ -233,7 +233,7 @@ const story = {
   '1-1-end': {
     media: {
       type: 'image',
-      src: 'https://picsum.photos/400/299',
+      src: 'https://img.pixers.pics/pho_wat(s3:700/FO/57/41/36/07/700_FO57413607_d4150fc661aa68e66476c8c0abd262a7.jpg,700,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,650,jpg)/taies-d-oreiller-signe-de-la-route-dans-la-foret-sombre.jpg.jpg',
     },
     route: {
       action: 'end',
