@@ -1,4 +1,5 @@
 const username = localStorage.getItem('username');
+
 const story = {
   0: {
     media: {
@@ -166,7 +167,7 @@ const story = {
         {
           type: 'button',
           choiceText: `Je me tire d'ici !`,
-          nextId: '2',
+          nextId: '3',
         },
       ],
     },

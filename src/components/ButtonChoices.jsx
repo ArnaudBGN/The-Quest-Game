@@ -15,7 +15,7 @@ function ButtonChoices({ text, nextId, points, state, setRouteId, setCurrentMess
   };
 
   const goToGameFinishPage = () => {
-    history.push('GameFinish', { status: state });
+    history.push('gamefinish', { status: state });
   };
 
   return (
