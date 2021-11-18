@@ -6,15 +6,6 @@ import { getCharacterData } from '../data/CharacterData';
 
 export default function CharDescTabs({ card }) {
   const [stateTabs, setStateTabs] = useState();
-
-  const goDescTab = () => {
-    setStateTabs(1);
-  };
-
-  const goSpellsTab = () => {
-    setStateTabs(2);
-  };
-
   const [Characters, SetCharacters] = useState();
   const [characterData, setCharacterData] = useState();
 
@@ -26,6 +17,14 @@ export default function CharDescTabs({ card }) {
       .then((data) => SetCharacters(data));
     getCharacterData(card.index).then((character) => setCharacterData(character));
   }, []);
+
+  const goDescTab = () => {
+    setStateTabs(1);
+  };
+
+  const goSpellsTab = () => {
+    setStateTabs(2);
+  };
 
   return (
     <>
