@@ -1,4 +1,5 @@
 const username = localStorage.getItem('username');
+
 const story = {
   0: {
     media: {
