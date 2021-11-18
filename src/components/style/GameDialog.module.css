@@ -1,8 +1,12 @@
 .DialogBoxContainer {
-  background-color: #e4d2c8;
+  background-image: url('https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131_960_720.jpg');
+  box-shadow: none;
+  box-shadow: 15px 20px 15px #1f1f1f;
   border: 3px solid #3c281d;
   padding: 15px;
   margin: 0 10px;
+  color: #3c281d;
+  border-radius: 30px;
 }
 
 .DialogBoxTitle {
@@ -20,5 +24,5 @@
 
 .DialogBoxNext {
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 30px;
 }
