@@ -7,62 +7,66 @@
   background-repeat: no-repeat;
   background-position-x: center;
   display: block;
-  padding-bottom: 400px;
-  margin-top: 30px;
+  padding-bottom: 210%;
+  margin-top: 5%;
 }
 
 .labelName {
   justify-content: center;
   display: flex;
-  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-family: Snell Roundhand, cursive;
   font-style: oblique;
   height: 20%;
-  font-size: 25px;
+  font-size: 180%;
   align-items: center;
-  padding-top: 25px;
+  padding-top: 5%;
 }
 
 .windowName {
-  border-radius: 30px;
   padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 70px;
-  padding-left: 10px;
-  border-left-width: 2px;
+  padding-bottom: 3%;
+  padding-right: 18%;
+  padding-left: 2%;
+  border-left-width: 40%;
   display: block;
   margin-left: auto;
-  margin-right: 130px;
-  margin-top: 80px;
+  margin-right: 30%;
+  margin-top: 18%;
   width: 6rem;
   color: rgb(170, 170, 118);
 }
 
 .nextButton {
-  border-radius: 10px;
-  height: 34px;
-  width: 74px;
+  border-radius: 50%;
+  height: 30%;
+  width: 30%;
   padding: 6px;
   margin-top: 30px;
   margin-left: 20px;
   background-image: linear-gradient(225deg, #404702 0%, #3c281d 50%, #6f0b00 100%, #e67a00);
   display: block;
   margin-right: auto;
-  margin-left: 160px;
+  margin-left: 30%;
 }
 
 .modalHeader {
   display: flex;
   justify-content: flex-end;
 }
+
 /*fin style mobile*/
 
+
+
 @media only screen and (min-width: 700px) {
+
+
   .wrapper {
     display: block;
     background-repeat: no-repeat;
     background-position-x: center;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 5%;
+    padding-bottom: 1%;
     background-image: url('https://cdn.pixabay.com/photo/2013/07/12/19/00/certificate-154169__340.png');
     background-repeat: no-repeat;
     background-position-x: center;
@@ -75,41 +79,40 @@
     justify-content: flex-end;
   }
 
-  .labelName {
-    justify-content: center;
-    display: flex;
-    font-family: Comic Sans MS, Comic Sans, cursive;
-    font-style: oblique;
-    height: 20%;
-    font-size: 25px;
-    align-items: center;
-    padding-top: 25px;
-  }
+  
+.labelName {
+  justify-content: center;
+  display: flex;
+  font-family: Snell Roundhand, cursive;
+  font-style: oblique;
+  height: 50%;
+  font-size: 180%;
+  align-items: center;
+  color: black;
+}
 
-  .windowName {
-    display: block;
-    background-color: rgb(223, 207, 207);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
-    border-left-width: 2px;
-    display: block;
-    margin-left: 635px;
-    width: 6rem;
-  }
+
+
+.windowName {
+  display: block;
+  position: relative;
+  width: 2em;
+  color: rgb(170, 170, 118);
+
+}
+
 
   .nextButton {
     border-radius: 10px;
-    height: 34px;
-    width: 74px;
-    padding: 5px;
-    margin-top: 30px;
-    margin-left: 20px;
+    width: 8%;
     background-image: linear-gradient(225deg, #404702 0%, #3c281d 50%, #6f0b00 100%, #e67a00);
     color: white;
     display: block;
     margin-right: auto;
-    margin-left: 700px;
+    margin-left: 45%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    
   }
+
 }
