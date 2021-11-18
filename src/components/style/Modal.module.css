@@ -19,7 +19,7 @@
   height: 20%;
   font-size: 180%;
   align-items: center;
-  padding-top: 5%;
+  margin-top: 5%;
 }
 
 .windowName {
@@ -31,13 +31,14 @@
   display: block;
   margin-left: auto;
   margin-right: 30%;
-  margin-top: 18%;
+  margin-top: 13%;
   width: 6rem;
-  color: rgb(170, 170, 118);
+  color: #aaaa76;
 }
 
 .nextButton {
-  border-radius: 50%;
+  border-radius: 10%;
+  color: white;
   height: 30%;
   width: 30%;
   padding: 6px;
@@ -64,14 +65,13 @@
   .wrapper {
     display: block;
     background-repeat: no-repeat;
+    background-size: 25%;
     background-position-x: center;
     padding-top: 5%;
-    padding-bottom: 1%;
     background-image: url('https://cdn.pixabay.com/photo/2013/07/12/19/00/certificate-154169__340.png');
     background-repeat: no-repeat;
     background-position-x: center;
-    margin-top: 3vh;
-    margin-bottom: 30vh;
+    margin: 3% auto 0 auto;
   }
 
   .modalHeader {
@@ -80,26 +80,27 @@
   }
 
   
-.labelName {
-  justify-content: center;
-  display: flex;
-  font-family: Snell Roundhand, cursive;
-  font-style: oblique;
-  height: 50%;
-  font-size: 180%;
-  align-items: center;
-  color: black;
-}
+  .labelName {
+    justify-content: center;
+    display: flex;
+    font-family: Snell Roundhand, cursive;
+    font-style: oblique;
+    font-size: 2rem;
+    align-items: center;
+    color: black;
+    margin-top: 2%;
+  }
 
 
 
-.windowName {
-  display: block;
-  position: relative;
-  width: 2em;
-  color: rgb(170, 170, 118);
-
-}
+  .windowName {
+    display: block;
+    position: relative;
+    width: 10vw;
+    color: rgb(170, 170, 118);
+    margin: 2% auto 0 auto;
+    padding: .7%;
+  }
 
 
   .nextButton {
