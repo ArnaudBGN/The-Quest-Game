@@ -12,7 +12,7 @@ function CharacterCard({ card }) {
   const history = useHistory();
 
   function handlePlayClick() {
-    history.push('GamePage');
+    history.push('gamepage');
   }
 
   useEffect(() => {

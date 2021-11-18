@@ -12,11 +12,11 @@ function GameFinishPage() {
   }, []);
 
   const playAgain = () => {
-    history.push('GamePage');
+    history.push('gamepage');
   };
 
   const goToCharacterSelect = () => {
-    history.push('CharacterSelect');
+    history.push('characterselect');
   };
 
   return (

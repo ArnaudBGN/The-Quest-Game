@@ -16,7 +16,7 @@ function HomePage() {
   const goToCharacterSelect = () => {
     localStorage.removeItem('username');
     localStorage.setItem('username', userName);
-    history.push('CharacterSelect');
+    history.push('characterselect');
   };
 
   return (
