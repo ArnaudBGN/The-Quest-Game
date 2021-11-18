@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+import GameMediaDisplay from './GameMediaDisplay';
 import GameDialog from './GameDialog';
 import ButtonChoices from './ButtonChoices';
 import InputChoice from './InputChoice';
@@ -23,7 +24,7 @@ function GamePage() {
       {currentStory && (
         <div className={styles.GamePageContainer}>
           <div className={styles.GamePageScene}>
-            <img src={currentStory?.image} alt="" />
+            <GameMediaDisplay media={currentStory?.media} />
           </div>
           <div className={styles.GamePageSceneText}>
             <GameDialog
@@ -45,13 +46,14 @@ function GamePage() {
                           text={choice.choiceText}
                           choice={choice.choiceMade}
                           nextId={choice.nextId}
+                          points={choice.points}
                           state={choice.state ? choice.state : null}
                           setRouteId={setRouteId}
                           setCurrentMessage={setCurrentMessage}
                         />
                       );
                     case 'input':
-                      return <InputChoice checkAnswer={choice.checkAnswer} setRouteId={setRouteId} setCurrentMessage={setCurrentMessage} />;
+                      return <InputChoice choiceAnswer={choice.choiceAnswer} setRouteId={setRouteId} setCurrentMessage={setCurrentMessage} />;
                   }
                 })
               : null}
