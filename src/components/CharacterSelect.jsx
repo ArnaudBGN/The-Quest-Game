@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 import CharacterCard from './CharacterCard';
+
 import styles from '../components/style/CharacterSelect.module.css';
 
 function CharacterSelect() {

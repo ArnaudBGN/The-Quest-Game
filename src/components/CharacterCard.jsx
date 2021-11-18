@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 import CharDescTabs from '../components/CharDescTabs';
 import { getCharacterData } from '../data/CharacterData';
+
 import styles from '../components/style/CharacterCard.module.css';
 
 function CharacterCard({ card }) {
