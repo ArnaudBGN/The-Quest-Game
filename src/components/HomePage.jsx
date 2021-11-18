@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import UserNameDialog from './UserNameDialog';
+
 import styles from './style/HomePage.module.css';
 
 function HomePage() {
@@ -14,8 +15,9 @@ function HomePage() {
   };
 
   const goToCharacterSelect = () => {
+    localStorage.removeItem('username');
     localStorage.setItem('username', userName);
-    history.push('CharacterSelect');
+    history.push('characterselect');
   };
 
   return (

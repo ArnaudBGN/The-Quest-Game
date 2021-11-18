@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Message from './Message';
 
 import styles from './style/GameDialog.module.css';
@@ -19,7 +20,7 @@ function GameDialog({ messages, currentMessage, setCurrentMessage, countMessage,
 
   return (
     <div className={styles.DialogBoxContainer}>
-      <div className={styles.DialogBoxTitle}>Dialog title</div>
+      <div className={styles.DialogBoxTitle}>Un réveil difficile</div>
       <Message message={messages[currentMessage]} key={currentMessage} />
       <div className={styles.DialogBoxFooter}>
         <div>

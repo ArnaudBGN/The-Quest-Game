@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 
 import styles from './style/InputChoice.module.css';
 
-function InputChoice({ checkAnswer, setRouteId, setCurrentMessage }) {
+function InputChoice({ choiceAnswer, setRouteId, setCurrentMessage }) {
   const [answer, setAnswer] = useState('');
 
   const handleChange = (e) => setAnswer(e.target.value);
 
   const handleAnswer = (e) => {
     if (e.key === 'Enter') {
-      setRouteId(checkAnswer(answer));
+      const checkedAnswer = choiceAnswer.find((elem) => elem.answer === answer);
+      setRouteId(checkedAnswer.nextId);
       setCurrentMessage(0);
     }
   };

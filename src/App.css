@@ -3,10 +3,9 @@
   padding: 0;
 }
 
-.App {
-  display: flex;
+.App{
+  display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }

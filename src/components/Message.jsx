@@ -1,6 +1,8 @@
 import React, { useMemo } from 'react';
 import { animated, useTransition } from 'react-spring';
 
+import styles from './style/Message.module.css';
+
 function Message({ message }) {
   const items = useMemo(
     () =>
@@ -19,7 +21,7 @@ function Message({ message }) {
   });
 
   return (
-    <div className="Message-Text">
+    <div className={styles.MessageText}>
       {transitions(({ display, key }, item) => (
         <animated.span
           key={key}

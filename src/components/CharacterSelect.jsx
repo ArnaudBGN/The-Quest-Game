@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 import CharacterCard from './CharacterCard';
+
 import styles from '../components/style/CharacterSelect.module.css';
 
 function CharacterSelect() {
@@ -18,7 +19,9 @@ function CharacterSelect() {
 
   return (
     <div className={styles.CharacterSelect}>
-      <h1 className={styles.hero}>Choose your Hero!</h1>
+      <div className={styles.hero}>
+        <p>Choose your Hero!</p>
+      </div>
       <div className={styles.Characters}>
         {cards.map((card) => (
           <CharacterCard key={card.index} card={card} />

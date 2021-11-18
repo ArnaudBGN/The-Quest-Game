@@ -2,66 +2,45 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import objectIMG from '../data/CharacterData';
+import CharDescTabs from '../components/CharDescTabs';
+import { getCharacterData } from '../data/CharacterData';
+
 import styles from '../components/style/CharacterCard.module.css';
 
 function CharacterCard({ card }) {
   const [Characters, SetCharacters] = useState([]);
+  const [characterData, setCharacterData] = useState({});
   const history = useHistory();
+
+  function handlePlayClick() {
+    history.push('gamepage');
+  }
 
   useEffect(() => {
     axios
       .get(`https://www.dnd5eapi.co${card.url}`)
       .then((res) => res.data)
       .then((data) => SetCharacters(data));
+
+    getCharacterData(card.index).then((character) => setCharacterData(character));
   }, []);
 
-  function handlePlayClick() {
-    history.push('GamePage');
-  }
-
   return (
-    <div className={styles.CharacterCardContainer}>
-      <div className={styles.CharacterCardImg}>
-        {Characters.index &&
-          objectIMG
-            .filter((elem) => elem.race === Characters.index)
-            .map((elem) => {
-              <img className={styles.CharImg} src={elem.img} alt={elem.race} />;
-            })}
-
-        <div className={styles.CharacterCardDescription}>
-          <h1 className={styles.CharDesc}>Character Description</h1>
-          <p>
-            <em>Race</em> : {Characters.name}
-          </p>
-          <p>
-            <em>Description</em> : {Characters.alignment}
-          </p>
-          <p>
-            <em>Size</em>: {Characters.size}
-          </p>
+    <>
+      {Characters && characterData && (
+        <div className={styles.CharacterCard}>
+          <div className={styles.CharacterCardImg}>
+            <img className={styles.CharImg} src={characterData.img} alt={characterData.race} />
+          </div>
+          <CharDescTabs key={card.index} card={card} />
+          <div className={styles.PlayButton}>
+            <button className={styles.clickToGame} onClick={handlePlayClick}>
+              Let&apos;s play
+            </button>
+          </div>
         </div>
-      </div>
-      <div className={styles.CharacterCardAttributes}>
-        <h1 className={styles.CharAttr}>Character Attributes</h1>
-        <p>
-          <em>Speed</em> : {Characters.speed}
-        </p>
-        <p>Strength: 30</p>
-        <p>
-          Spells:
-          <li>Spell 1</li>
-          <li>Spell 2</li>
-          <li>Spell 3</li>
-        </p>
-      </div>
-      <div className={styles.goToGame}>
-        <button className={styles.clickToGame} onClick={handlePlayClick}>
-          Let&apos;s play
-        </button>
-      </div>
-    </div>
+      )}
+    </>
   );
 }
 
