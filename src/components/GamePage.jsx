@@ -48,6 +48,7 @@ function GamePage() {
                           nextId={choice.nextId}
                           points={choice.points}
                           state={choice.state ? choice.state : null}
+                          caption={choice.caption ? choice.caption : null}
                           setRouteId={setRouteId}
                           setCurrentMessage={setCurrentMessage}
                         />
