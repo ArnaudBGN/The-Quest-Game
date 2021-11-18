@@ -10,17 +10,19 @@ function GameFinishPage() {
   const history = useHistory();
   const location = useLocation();
   const [isWinned, setIsWinned] = useState(true);
-  const { score } = useContext(ScoreContext);
+  const { score, setScore } = useContext(ScoreContext);
 
   useEffect(() => {
     setIsWinned(location.state.status);
   }, []);
 
   const playAgain = () => {
+    setScore(0);
     history.push('gamepage');
   };
 
   const goToCharacterSelect = () => {
+    setScore(0);
     history.push('characterselect');
   };
 

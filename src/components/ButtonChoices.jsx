@@ -15,6 +15,7 @@ function ButtonChoices({ text, nextId, points, state, caption, setRouteId, setCu
   };
 
   const goToGameFinishPage = () => {
+    setScore(score + points);
     history.push('gamefinish', { status: state, caption: caption });
   };
 
