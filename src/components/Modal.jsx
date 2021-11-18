@@ -8,10 +8,6 @@ function Modal({ revele, goToCharacterSelect, setUserName }) {
     <React.Fragment>
       {/* <div className={styles.overlay} /> */}
       <div className={styles.wrapper}>
-        <div className={styles.modal}>
-          <div className={styles.modalHeader}></div>
-        </div>
-
         <label className={styles.labelName} htmlform="name" htmlFor="name">
           Enter your Name
         </label>
