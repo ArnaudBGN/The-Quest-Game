@@ -1,4 +1,4 @@
-const username = localStorage.getItem('username');
+const userName = localStorage.getItem('username');
 
 const story = {
   0: {
@@ -10,7 +10,7 @@ const story = {
       action: '',
       require: '',
       text: [
-        `Debout ${username} !!!!`,
+        `Debout ${userName} !!!!`,
         `Vous vous réveillez allongé par terre. Une forte douleur à la tête vous empêche de vous resaisir.`,
         `Vous vous relevez et sentez que vous repennez vos esprit petit à petit`,
         `Vous sentez que vous avez pris un sacré coup sur la tête ! Vous avez un mauvais présentiment.`,
@@ -249,27 +249,52 @@ const story = {
   },
   2: {
     media: {
+      type: 'image',
+      src: '',
+    },
+    route: {
+      action: '',
+      text: [
+        `Vous marchez longtemps...`,
+        `Très longtemps...`,
+        `Vous arrivez en ville, sans votre sac, que vous avez lâchement abandonné !`,
+        `Cependant, vous avez toujours votre bourse sur vous. Une soudaine envie de dépenser votre argent vous viens. Surement une frustration à combler.`,
+        `Vous vous rapprochez d'une taverne qui vous semble bien animée'`,
+        `Que décidez-vous ?`,
+      ],
+      choices: [
+        {
+          type: 'button',
+          choiceText: 'Rentrer dans la taverne',
+          choiceMade: 'drink',
+          nextId: '2-1',
+          points: 0,
+        },
+        {
+          type: 'button',
+          choiceText: 'Passer votre chemin',
+          choiceMade: 'continue',
+          nextId: '2-2',
+          points: 0,
+        },
+      ],
+    },
+  },
+  '2-1-end': {
+    media: {
       type: 'video',
       src: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1',
     },
     route: {
-      action: 'gauche',
+      action: 'drink',
       require: '',
-      text: ['Un puissant enemi se dresse devant vous !!!', "Oserez-vous l'attaquer ou fuirez-vous comme un lâche"],
+      text: [`Mais, c'est Rick Asley !`, `Vous venez de vous faire rickroll`],
       choices: [
         {
           type: 'button',
           choiceText: 'Attaquer',
-          choiceMade: 'attack',
-          nextId: '3-1',
-          points: 100,
-        },
-        {
-          type: 'button',
-          choiceText: 'Fuir',
-          choiceMade: 'flee',
-          nextId: '3-2',
-          points: -100,
+          nextId: 'End',
+          state: false,
         },
       ],
     },
@@ -277,16 +302,31 @@ const story = {
   3: {
     media: {
       type: 'image',
-      src: 'https://picsum.photos/400/299',
+      src: '',
     },
     route: {
-      action: 'tout droit',
-      require: '',
-      text: ['Vous avancez tout droit', 'Vous tombez sur une enigme', 'Quel est le muscle ?'],
+      action: '',
+      text: [
+        `Vous marchez longtemps...`,
+        `Très longtemps...`,
+        `Vous arrivez en ville. Tout cette histoire vous a donné soif !`,
+        `Vous vous rapprochez d'une taverne qui vous semble bien animée'`,
+        `Que décidez-vous ?`,
+      ],
       choices: [
         {
-          type: 'input',
-          checkAnswer: (answer) => (answer === 'kamoolox' ? '2-1' : '0'),
+          type: 'button',
+          choiceText: 'Rentrer dans la taverne',
+          choiceMade: 'drink',
+          nextId: '2-1',
+          points: 0,
+        },
+        {
+          type: 'button',
+          choiceText: 'Passer votre chemin',
+          choiceMade: 'continue',
+          nextId: '3-2',
+          points: 0,
         },
       ],
     },
