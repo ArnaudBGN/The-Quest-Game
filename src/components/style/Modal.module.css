@@ -14,7 +14,7 @@
 .labelName {
   justify-content: center;
   display: flex;
-  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-family: Snell Roundhand, cursive;
   font-style: oblique;
   height: 20%;
   font-size: 25px;
@@ -23,6 +23,7 @@
 }
 
 .windowName {
+  border-radius: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 70px;

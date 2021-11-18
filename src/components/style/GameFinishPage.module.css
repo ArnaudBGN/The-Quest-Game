@@ -4,11 +4,13 @@
   align-items: center;
   justify-content: center;
   width: 100vw;
+  height: 100vh;
 }
 
 .GameFinishText {
-  margin: 25vh 0;
-  width: 100vw;
+  background-color: #6f0b00;
+  margin: 20vh 0;
+  width: 50vw;
 }
 
 .GameFinishStatus {
@@ -26,4 +28,10 @@
   justify-content: space-around;
   width: 40vw;
   margin-bottom: 10vh;
+}
+
+.GameFinishChoices > button {
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
 }

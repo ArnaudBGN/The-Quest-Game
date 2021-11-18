@@ -1,9 +1,16 @@
+const userName = localStorage.getItem('username');
+
 const characterData = {
   'half-orc': {
+    name: `${userName}`,
     race: 'half-orc',
     img: './src/components/images/Half-orc.png',
+    img2: './src/components/images/Half-orc2.png',
+    img3: './src/components/images/Half-orc3.png',
     strength: 60,
     intelligence: 10,
+    life: 100,
+    level: 1,
     spell: [
       {
         id: 1,
@@ -27,23 +34,45 @@ const characterData = {
         damage: -25,
       },
     ],
+    equipment: [
+      {
+        id: 1,
+        name: 'Curved Sword',
+        damage: -15,
+      },
+      {
+        id: 2,
+        name: 'War Hammer',
+        damage: -20,
+      },
+      {
+        id: 3,
+        name: 'Orc Shield',
+        damage: -15,
+      },
+    ],
   },
   dwarf: {
+    name: `${userName}`,
     race: 'dwarf',
     img: './src/components/images/Dwarf.png',
+    img2: './src/components/images/Dwarf2.png',
+    img3: './src/components/images/Dwarf3.png',
     strength: 35,
     intelligence: 30,
+    life: 100,
+    level: 1,
     spell: [
       {
         id: 1,
         name: 'Arcane Sword',
         description: 'You create a sword-shaped plane of force that hovers within range.',
-        damage: -5,
+        damage: -15,
       },
       {
         id: 2,
         name: 'Blade Barrier',
-        description: 'You create a vertical wall of whirling, razor-sharp blades made of magical energy',
+        description: 'You create a vertical wall of whirling, razor-sharp blades made of magical energy.',
         damage: -20,
       },
       {
@@ -51,21 +80,43 @@ const characterData = {
         name: 'Control Weather',
         description:
           "You take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell. Moving to a place where you don't have a clear path to the sky ends the spell early.",
-        damage: -10,
+        damage: -15,
+      },
+    ],
+    equipment: [
+      {
+        id: 1,
+        name: 'Axes',
+        damage: -15,
+      },
+      {
+        id: 2,
+        name: 'Hammer',
+        damage: -20,
+      },
+      {
+        id: 3,
+        name: 'Magic Powder',
+        damage: -15,
       },
     ],
   },
   elf: {
+    name: `${userName}`,
     race: 'elf',
     img: './src/components/images/Elf2.png',
+    img2: './src/components/images/Elf3.png',
+    img3: './src/components/images/Elf4.png',
     strength: 45,
     intelligence: 50,
+    life: 100,
+    level: 1,
     spell: [
       {
         id: 1,
         name: 'Fireball',
         description:
-          'A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame',
+          'A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame.',
         damage: -15,
       },
       {
@@ -83,12 +134,34 @@ const characterData = {
         damage: -10,
       },
     ],
+    equipment: [
+      {
+        id: 1,
+        name: 'Bow',
+        damage: -20,
+      },
+      {
+        id: 2,
+        name: 'Sword',
+        damage: -20,
+      },
+      {
+        id: 3,
+        name: 'Elf Armor',
+        damage: -15,
+      },
+    ],
   },
   human: {
+    name: `${userName}`,
     race: 'human',
     img: './src/components/images/Human.png',
+    img2: './src/components/images/Human2.png',
+    img3: './src/components/images/Human3.png',
     strength: 40,
     intelligence: 30,
+    life: 100,
+    level: 1,
     spell: [
       {
         id: 1,
@@ -108,6 +181,23 @@ const characterData = {
         id: 3,
         name: 'Vicious Mockery',
         description: 'You unleash a string of insults laced with subtle enchantments at a creature you can see within range.',
+        damage: -15,
+      },
+    ],
+    equipment: [
+      {
+        id: 1,
+        name: 'Buffoon disguise',
+        damage: -10,
+      },
+      {
+        id: 2,
+        name: 'Domination Scepter',
+        damage: -30,
+      },
+      {
+        id: 3,
+        name: 'Book of Jokes',
         damage: -15,
       },
     ],

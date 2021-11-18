@@ -1,15 +1,21 @@
-import React, { useState } from 'react';
+/* eslint-disable no-const-assign */
+import React, { useContext, useState } from 'react';
+
+import ScoreContext from '../contexts/ScoreContext';
 
 import styles from './style/InputChoice.module.css';
 
-function InputChoice({ checkAnswer, setRouteId, setCurrentMessage }) {
+function InputChoice({ choiceAnswer, setRouteId, setCurrentMessage }) {
   const [answer, setAnswer] = useState('');
+  const { score, setScore } = useContext(ScoreContext);
 
   const handleChange = (e) => setAnswer(e.target.value);
 
   const handleAnswer = (e) => {
     if (e.key === 'Enter') {
-      setRouteId(checkAnswer(answer));
+      const checkedAnswer = choiceAnswer.find((elem) => elem.answer === answer);
+      setRouteId(checkedAnswer.nextId);
+      setScore(() => (score += checkedAnswer.points));
       setCurrentMessage(0);
     }
   };
