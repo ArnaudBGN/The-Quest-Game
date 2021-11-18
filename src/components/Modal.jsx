@@ -6,7 +6,7 @@ function Modal({ revele, goToCharacterSelect, setUserName }) {
 
   return revele ? (
     <React.Fragment>
-      <div className={styles.overlay} />
+      {/* <div className={styles.overlay} /> */}
       <div className={styles.wrapper}>
         <div className={styles.modal}>
           <div className={styles.modalHeader}></div>

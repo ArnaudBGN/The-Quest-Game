@@ -1,19 +1,14 @@
+/*css mobile style*/
+
 .wrapper {
   display: block;
-  color: #e4d2c8;
-  background-color: #3c281d;
-  box-shadow: 15px 20px 15px #1f1f1f;
-  width: 40%;
-  border: 2px solid black;
-  padding-right: 15px;
-  margin: 0 auto;
-  border-radius: 50%;
-  padding-bottom: 40px;
-}
-
-.modalHeader {
-  display: flex;
-  justify-content: flex-end;
+  color: black;
+  background-image: url('https://cdn.pixabay.com/photo/2013/07/12/19/00/certificate-154169__340.png');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  display: block;
+  padding-bottom: 400px;
+  margin-top: 30px;
 }
 
 .labelName {
@@ -21,7 +16,6 @@
   display: flex;
   font-family: Comic Sans MS, Comic Sans, cursive;
   font-style: oblique;
-
   height: 20%;
   font-size: 25px;
   align-items: center;
@@ -32,18 +26,90 @@
   border-radius: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-right: 15px;
+  padding-right: 70px;
   padding-left: 10px;
   border-left-width: 2px;
-  margin-left: 130px;
-  margin-bottom: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: 130px;
+  margin-top: 80px;
+  width: 6rem;
+  color: rgb(170, 170, 118);
 }
 
 .nextButton {
   border-radius: 10px;
   height: 34px;
   width: 74px;
-  padding: 5px;
+  padding: 6px;
   margin-top: 30px;
   margin-left: 20px;
+  background-image: linear-gradient(225deg, #404702 0%, #3c281d 50%, #6f0b00 100%, #e67a00);
+  display: block;
+  margin-right: auto;
+  margin-left: 160px;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: flex-end;
+}
+/*fin style mobile*/
+
+@media only screen and (min-width: 700px) {
+  .wrapper {
+    display: block;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-image: url('https://cdn.pixabay.com/photo/2013/07/12/19/00/certificate-154169__340.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    margin-top: 3vh;
+    margin-bottom: 30vh;
+  }
+
+  .modalHeader {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .labelName {
+    justify-content: center;
+    display: flex;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-style: oblique;
+    height: 20%;
+    font-size: 25px;
+    align-items: center;
+    padding-top: 25px;
+  }
+
+  .windowName {
+    display: block;
+    background-color: rgb(223, 207, 207);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-left-width: 2px;
+    display: block;
+    margin-left: 635px;
+    width: 6rem;
+  }
+
+  .nextButton {
+    border-radius: 10px;
+    height: 34px;
+    width: 74px;
+    padding: 5px;
+    margin-top: 30px;
+    margin-left: 20px;
+    background-image: linear-gradient(225deg, #404702 0%, #3c281d 50%, #6f0b00 100%, #e67a00);
+    color: white;
+    display: block;
+    margin-right: auto;
+    margin-left: 700px;
+  }
 }
